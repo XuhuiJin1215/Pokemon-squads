@@ -1,0 +1,27 @@
+#pokemon
+id,form,form_en,form_zh,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+13-6,,,,Garchomp,烈咬陆鲨,dragon,ground,#7B8FB8,Rough Skin,粗糙皮肤,Garchompite,烈咬陆鲨进化石,Route 18,18号道路,600,357,394,226,196,206,282
+13-6b,mega,Mega Evolution,超级进化,,,,,,Sand Force,沙之力,,,,,700,357,436,266,276,226,280
+20-4,,,,Gengar,耿鬼,ghost,poison,#8A6BB0,,,,,Obsidian Fieldlands,黑曜原野,500,323,251,219,394,249,349
+21-6,,,,Miraidon,密勒顿,electric,dragon,#A49CD8,Hadron Engine,强子引擎,Magnet,磁铁,Poco Path,小匙小径,670,342,185,236,405,266,369
+21-6b,tera,Terastal,太晶化,,,stellar,,,,,,,,,,,,,,,
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+13-6,1,,Dragon Claw,龙爪,dragon,150
+13-6,2,,Earthquake,地震,ground,180
+13-6,3,,Swords Dance,剑舞,normal,
+13-6,4,,Stone Edge,尖石攻击,rock,140
+13-6b,1,,,,,190
+13-6b,2,,,,,230
+13-6b,4,,,,,175
+20-4,1,,Shadow Ball,暗影球,ghost,200
+20-4,1,agile,,,,170
+20-4,1,strong,,,,240
+20-4,2,,Sludge Bomb,污泥炸弹,poison,180
+20-4,2,agile,,,,150
+20-4,2,strong,,,,210
+21-6,1,,Electro Drift,闪电猛冲,electric,730
+21-6,2,,Draco Meteor,流星群,dragon,608
+21-6,3,,Power Gem,力量宝石,rock,225
+21-6,4,,Flash Cannon,加农光炮,steel,225

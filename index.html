@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Pokémon Squads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F1EC; --paper:#FFFFFF; --ink:#1E1F24; --muted:#6B6E78; --line:#E2DFD8;
+  --accent:#E3350D; --radius:18px;
+  --font:"Rubik","Noto Sans SC",system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.4}
+html[lang="zh-CN"] body{--font:"Noto Sans SC","Rubik",system-ui,"Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block}
+button{font-family:inherit}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:20;background:rgba(243,241,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
+.brand{white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.2px}
+.brand .ball{width:26px;height:26px}
+.top .sp{flex:1}
+.lang{display:flex;background:#E6E3DC;border-radius:999px;padding:3px}
+.lang button{white-space:nowrap;border:0;background:transparent;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+
+main{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+
+/* ---------- home ---------- */
+.hero h1{font-size:34px;line-height:1.1;margin:10px 0 6px;font-weight:800;letter-spacing:-.3px}
+.hero p{margin:0;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 8px}
+.tile{background:var(--paper);border-radius:14px;padding:14px 16px;border:1px solid var(--line)}
+.tile b{display:block;font-size:28px;font-weight:700;line-height:1.1}
+.tile span{font-size:13px;color:var(--muted)}
+.gen-h{display:flex;align-items:baseline;gap:10px;margin:34px 0 12px}
+.gen-h h2{margin:0;font-size:15px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);font-weight:700}
+html[lang="zh-CN"] .gen-h h2{letter-spacing:2px}
+.gen-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.grow{display:grid;grid-template-columns:8px 92px 1fr auto;align-items:center;gap:0 18px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:10px;padding-right:18px;min-height:104px;transition:transform .15s,box-shadow .15s}
+a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.grow .spine{align-self:stretch;background:var(--gc)}
+.grow .box{width:92px;height:92px;margin:6px 0;border-radius:12px;overflow:hidden;background:var(--gc);display:grid;place-items:center}
+.grow .box img{width:100%;height:100%;object-fit:cover}
+.box .ph{color:#fff;font-weight:800;font-size:26px;opacity:.95}
+.ginfo .no{font-size:12px;font-weight:700;color:var(--gc);letter-spacing:1px}
+.ginfo .t{font-size:19px;font-weight:700;margin:1px 0 3px}
+.ginfo .m{font-size:13px;color:var(--muted)}
+.squad{display:flex;gap:4px}
+.squad .mon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;position:relative}
+.squad .mon img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
+.squad .mon .ini{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:15px;color:rgba(0,0,0,.55)}
+.squad .empty{width:62px;height:62px;display:grid;place-items:center;opacity:.25}
+.squad .empty svg{width:30px;height:30px}
+.grow.pending{opacity:.62}
+.grow.pending .soon{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.4px}
+
+/* ---------- game page ---------- */
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:500;margin-bottom:14px}
+.back:hover{color:var(--ink)}
+.ghero{border-radius:24px;background:var(--gc);color:#fff;padding:24px;display:grid;grid-template-columns:150px 1fr;gap:24px;position:relative;overflow:hidden}
+.ghero::after{content:"";position:absolute;right:-90px;top:-90px;width:320px;height:320px;border-radius:50%;border:42px solid rgba(255,255,255,.08)}
+.ghero .box{width:150px;height:150px;border-radius:16px;overflow:hidden;background:rgba(255,255,255,.14);display:grid;place-items:center;position:relative;z-index:1}
+.ghero .box img{width:100%;height:100%;object-fit:cover}
+.ghero .no{font-weight:700;letter-spacing:1.5px;opacity:.8;font-size:13px}
+.ghero h1{margin:2px 0 8px;font-size:32px;line-height:1.1;font-weight:800}
+.ghero .meta{opacity:.85;font-size:14px}
+.ghero .people{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;position:relative;z-index:1}
+.chip{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);border-radius:14px;padding:6px 14px 6px 6px}
+.chip .pic{width:44px;height:44px;border-radius:10px;overflow:hidden;background:rgba(255,255,255,.2);display:grid;place-items:center}
+.chip .pic img{width:100%;height:100%;object-fit:cover}
+.chip .pic svg{width:22px;height:22px;opacity:.9}
+.chip small{display:block;font-size:11px;opacity:.75;text-transform:uppercase;letter-spacing:.8px}
+html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
+.chip b{font-size:15px;font-weight:600}
+.jump{display:flex;gap:8px;margin:18px 0 6px;flex-wrap:wrap}
+.jump a{display:flex;align-items:center;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px 12px 3px 3px;font-size:13px;font-weight:500}
+.jump a .dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;overflow:hidden}
+.jump a .dot img{width:30px;height:30px;object-fit:contain}
+.pager{display:flex;justify-content:space-between;margin-top:26px;gap:12px}
+.pager a{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px;max-width:48%}
+.pager a small{display:block;color:var(--muted);font-size:12px}
+.pager a:hover{border-color:#cfcac0}
+
+/* ---------- pokémon card ---------- */
+.cards{display:flex;flex-direction:column;gap:18px;margin-top:18px}
+.card{--fg:#1E1F24;--sub:rgba(30,31,36,.62);--glass:rgba(255,255,255,.38);background:var(--pc);color:var(--fg);border-radius:22px;padding:18px 22px 16px;position:relative;scroll-margin-top:80px;transition:background .25s}
+.card.dark{--fg:#fff;--sub:rgba(255,255,255,.75);--glass:rgba(255,255,255,.16)}
+.c-head{display:flex;align-items:center;gap:10px;min-height:40px}
+.c-head .ball{width:26px;height:26px;flex:none;display:grid}
+.c-head .ball img,.c-head .ball svg{width:26px;height:26px}
+.c-name{white-space:nowrap}
+.c-name{font-size:28px;font-weight:700;line-height:1.1}
+.c-form{font-size:14px;font-weight:600;color:var(--sub);margin-left:2px}
+.c-head .sp{flex:1}
+.c-cp{text-align:right;line-height:1}
+.c-cp small{font-size:12px;font-weight:700;color:var(--sub);display:block;margin-bottom:2px}
+.c-cp b{font-size:26px;font-weight:700}
+.c-types{display:flex;gap:6px;margin-left:12px}
+.ticon{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;overflow:hidden;flex:none}
+.ticon img{width:100%;height:100%;object-fit:contain}
+.ticon i{font-style:normal;font-size:11px;font-weight:700;color:#fff;text-transform:uppercase}
+.tera-tag{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--sub)}
+.c-body{display:grid;grid-template-columns:220px 290px 1fr;gap:10px;align-items:center;margin-top:6px}
+.c-art{height:230px;display:grid;place-items:center}
+.c-art img{max-width:100%;max-height:230px;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.18))}
+.c-art .ini{width:150px;height:150px;border-radius:50%;background:var(--glass);display:grid;place-items:center;font-size:44px;font-weight:800;color:var(--sub)}
+.radar{width:290px;max-width:100%;height:auto;display:block}
+.radar text{font-family:var(--font);fill:var(--fg)}
+.moves{display:flex;flex-direction:column;gap:6px}
+.mv{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;padding:5px 8px 5px 4px;border-radius:12px;transition:opacity .2s,background .2s}
+.mv .ticon{width:30px;height:30px;border-radius:8px}
+.mv .n{font-size:18px;font-weight:600;line-height:1.15}
+.mv .d{font-size:18px;font-weight:600;text-align:right;min-width:44px;font-variant-numeric:tabular-nums}
+.mv .d.none{color:var(--sub);font-weight:400}
+.mv.dim{opacity:.32}
+.mv.hl{background:var(--glass);box-shadow:inset 0 0 0 2px rgba(255,214,0,.85)}
+.mv .from{display:block;font-size:12px;font-weight:500;color:var(--sub)}
+.c-foot{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;margin-top:10px;padding-top:12px;border-top:1px solid rgba(0,0,0,.08)}
+.card.dark .c-foot{border-top-color:rgba(255,255,255,.18)}
+.fi{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
+.fi .ic{width:26px;height:26px;display:grid;place-items:center;flex:none}
+.fi .ic img{width:26px;height:26px;object-fit:contain}
+.fi .ic svg{width:22px;height:22px}
+.fi img.place{width:44px;height:28px;border-radius:6px;object-fit:cover;flex:none}
+.fi small{font-weight:500;color:var(--sub);font-size:12px;margin-right:2px}
+.c-foot .sp{flex:1}
+.bst{font-size:13px;color:var(--sub);font-weight:600}
+.bst b{color:var(--fg);font-size:15px}
+.toggles{display:flex;gap:6px;margin-left:10px}
+.tg{border:0;cursor:pointer;background:var(--glass);border-radius:12px;height:38px;min-width:38px;padding:0 10px;display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--fg);transition:transform .12s,box-shadow .15s,background .15s}
+.tg img{height:28px;width:auto;max-width:56px;object-fit:contain}
+.tg:hover{transform:translateY(-1px)}
+.tg.on{background:var(--paper);color:var(--ink);box-shadow:0 0 0 2px var(--fg)}
+.tg.has-img{padding:0 5px}
+
+.note{color:var(--muted);text-align:center;padding:60px 0}
+.err{background:#fff3f0;border:1px solid #f3c9bf;color:#8a2b17;border-radius:12px;padding:14px 16px;font-size:14px}
+
+@media (max-width:860px){
+  .c-body{grid-template-columns:1fr 1fr}
+  .moves{grid-column:1/-1}
+  .c-art{height:200px}.c-art img{max-height:200px}
+  .radar{margin:0 auto}
+}
+@media (max-width:640px){
+  main{padding:16px 16px 60px}
+  .top-in{padding:10px 16px}
+  .brand{font-size:16px}
+  .lang button{padding:5px 11px}
+  .hero h1{font-size:27px}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .grow{grid-template-columns:6px 64px 1fr;padding-right:12px;gap:0 12px}
+  .grow .box{width:64px;height:64px}
+  .grow .squad{grid-column:2/-1;margin:2px 0 10px;flex-wrap:wrap}
+  .squad .mon,.squad .empty{width:46px;height:46px}
+  .squad .mon img{width:44px;height:44px}
+  .squad .mon .ini{width:34px;height:34px;font-size:12px}
+  .ginfo .t{font-size:16px}
+  .ghero{grid-template-columns:1fr;padding:18px}
+  .ghero .box{width:110px;height:110px}
+  .ghero h1{font-size:26px}
+  .card{padding:14px 14px 12px}
+  .c-head{flex-wrap:wrap}
+  .c-name{font-size:22px}
+  .c-cp b{font-size:20px}
+  .c-types{margin-left:6px}.ticon{width:30px;height:30px}
+  .c-body{grid-template-columns:1fr}
+  .c-art{height:180px}.c-art img{max-height:180px}
+  .mv .n,.mv .d{font-size:16px}
+  .toggles{width:100%;margin:8px 0 0}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="#/"><svg class="ball" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff" stroke="#1E1F24" stroke-width="2"/><path d="M1 16a15 15 0 0 1 30 0z" fill="#E3350D" stroke="#1E1F24" stroke-width="2"/><circle cx="16" cy="16" r="4.5" fill="#fff" stroke="#1E1F24" stroke-width="2"/></svg><span data-t="brand"></span></a>
+  <div class="sp"></div>
+  <div class="lang" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="zh">中文</button></div>
+</div></header>
+<main id="app"><div class="note">Loading…</div></main>
+
+<script>
+/* =========================================================
+   Text that is not data: UI labels and type names
+   ========================================================= */
+const UI = {
+  en:{brand:"My Pokémon Squads", title:"My Pokémon squads", sub:"The team I finished each game with — one squad per game, from Kanto to Paldea.",
+      games:"Games", logged:"Squads logged", pokemon:"Pokémon", species:"Species",
+      gen:n=>"Generation "+["","I","II","III","IV","V","VI","VII","VIII","IX","X"][n],
+      soon:"Squad not added yet", back:"All games", player:"Player", hometown:"Hometown",
+      ability:"Ability", item:"Held item", location:"Caught at", bst:"Base stat total", cp:"CP",
+      prev:"Previous", next:"Next", base:"Base", from:"from",
+      stats:{hp:"HP",atk:"Atk",def:"Def",spa:"Sp. Atk",spd:"Sp. Def",spe:"Speed"},
+      loadErr:"Couldn't load the data files. If you opened index.html directly from your disk, run it through a local server or GitHub Pages instead (browsers block reading CSVs from file://).",
+      variants:{agile:"Agile Style",strong:"Strong Style",plus:"Plus Move"}, tera:"Tera Type", notFound:"Game not found."},
+  zh:{brand:"我的宝可梦队伍", title:"我的宝可梦队伍", sub:"每一作通关时的主力阵容 —— 从关都到帕底亚，一作一队。",
+      games:"游戏", logged:"已录入队伍", pokemon:"宝可梦", species:"种类",
+      gen:n=>"第"+["","一","二","三","四","五","六","七","八","九","十"][n]+"世代",
+      soon:"队伍尚未录入", back:"全部游戏", player:"主角", hometown:"故乡",
+      ability:"特性", item:"携带物品", location:"捕获地点", bst:"种族值", cp:"CP",
+      prev:"上一作", next:"下一作", base:"原形态", from:"原招式",
+      stats:{hp:"HP",atk:"攻击",def:"防御",spa:"特攻",spd:"特防",spe:"速度"},
+      loadErr:"无法读取数据文件。如果是直接从本地双击打开 index.html，请改用本地服务器或 GitHub Pages（浏览器不允许从 file:// 读取 CSV）。",
+      variants:{agile:"迅疾",strong:"刚猛",plus:"Plus 招式"}, tera:"太晶属性", notFound:"找不到这款游戏。"}
+};
+const TYPES = {
+  normal:["Normal","一般","#9FA19F"], fire:["Fire","火","#E62829"], water:["Water","水","#2980EF"], grass:["Grass","草","#3FA129"],
+  electric:["Electric","电","#FAC000"], ice:["Ice","冰","#3DCEF3"], fighting:["Fighting","格斗","#FF8000"], poison:["Poison","毒","#9141CB"],
+  ground:["Ground","地面","#915121"], flying:["Flying","飞行","#81B9EF"], psychic:["Psychic","超能力","#EF4179"], bug:["Bug","虫","#91A119"],
+  rock:["Rock","岩石","#AFA981"], ghost:["Ghost","幽灵","#704170"], dragon:["Dragon","龙","#5060E1"], dark:["Dark","恶","#624D4E"],
+  steel:["Steel","钢","#60A1B8"], fairy:["Fairy","妖精","#EF70EF"], stellar:["Stellar","星晶","#7C6CD8"]
+};
+/* Form kinds -> toggle button image icons/form-<kind>.png (falls back to a text pill) */
+const FORM_FALLBACK = {mega:"M", z:"Z", dynamax:"DMAX", gigantamax:"GMAX", tera:"TERA", primal:"P", alt:"⇄"};
+const VARIANT_FALLBACK = {agile:"A", strong:"S", plus:"+"};
+
+/* =========================================================
+   Language
+   ========================================================= */
+let LANG = "en";
+try{ LANG = localStorage.getItem("squads-lang") || ((navigator.language||"").toLowerCase().startsWith("zh") ? "zh" : "en"); }catch(e){}
+const T = k => UI[LANG][k];
+const L = (o,k) => (LANG==="zh" ? (o[k+"_zh"]||o[k+"_en"]) : (o[k+"_en"]||o[k+"_zh"])) || "";
+const typeName = t => TYPES[t] ? TYPES[t][LANG==="zh"?1:0] : t;
+function setLang(l){
+  LANG=l; try{localStorage.setItem("squads-lang",l)}catch(e){}
+  document.documentElement.lang = l==="zh" ? "zh-CN" : "en";
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===l));
+  document.querySelectorAll("[data-t]").forEach(e=>e.textContent=T(e.dataset.t));
+  document.title = T("brand");
+  render();
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+
+/* =========================================================
+   CSV
+   ========================================================= */
+function parseCSV(text){
+  const rows=[]; let row=[], f="", q=false;
+  text=text.replace(/^﻿/,"");
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){ if(c==='"'){ if(text[i+1]==='"'){f+='"';i++} else q=false } else f+=c; }
+    else if(c==='"') q=true;
+    else if(c===','){ row.push(f); f=""; }
+    else if(c==='\n'||c==='\r'){ if(c==='\r'&&text[i+1]==='\n') i++; row.push(f); rows.push(row); row=[]; f=""; }
+    else f+=c;
+  }
+  if(f!==""||row.length){ row.push(f); rows.push(row); }
+  return rows.map(r=>r.map(s=>s.trim()));
+}
+/* A file is one table, or several tables each introduced by a "#name" line */
+function sections(text){
+  const out={}; let name="main", head=null;
+  for(const r of parseCSV(text)){
+    if(!r.some(x=>x)) continue;
+    if(r[0].startsWith("#")){ name=r[0].slice(1).trim().toLowerCase(); head=null; out[name]=[]; continue; }
+    if(!head){ head=r.map(h=>h.toLowerCase()); out[name]=out[name]||[]; continue; }
+    const o={}; head.forEach((h,i)=>o[h]=r[i]||""); out[name].push(o);
+  }
+  return out;
+}
+
+/* =========================================================
+   Data model
+   ========================================================= */
+const STATS=["hp","atk","def","spa","spd","spe"];
+let GAMES=[], SQUADS={}, LOADED=false, LOAD_ERR=false;
+
+function buildSquad(sec){
+  const rows=sec.pokemon||[], moves=sec.moves||[];
+  const mons=[]; const byId={};
+  for(const r of rows){
+    const m=/^(\d+)-(\d+)([a-z]?)$/.exec(r.id); if(!m) continue;
+    const baseId=`${m[1]}-${m[2]}`;
+    if(!m[3] || m[3]==="a"){ const mon={id:baseId, slot:+m[2], base:r, forms:[]}; mons.push(mon); byId[baseId]=mon; }
+    else if(byId[baseId]) byId[baseId].forms.push(r);
+  }
+  for(const mon of mons){
+    mon.moves=moves.filter(x=>x.id===mon.id);
+    mon.forms.forEach(f=>f._moves=moves.filter(x=>x.id===f.id));
+    mon.variants=[...new Set(mon.moves.map(x=>x.variant).filter(Boolean))];
+  }
+  mons.sort((a,b)=>a.slot-b.slot);
+  return mons;
+}
+/* Combine a base row with a form row: blank cells in the form inherit the base value */
+function view(mon, formIdx, variant){
+  const b=mon.base, f=formIdx>=0?mon.forms[formIdx]:null;
+  const r=Object.assign({}, b);
+  if(f) for(const k in f) if(f[k]!=="" && k!=="id") r[k]=f[k];
+  if(f){ r.id=f.id; r.form=f.form; }
+  if(f && f.type1 && f.type2==="" && f.form!=="tera") r.type2="";        // a form listing one type is mono-type
+  const st={}; let cp=0, ok=true;
+  for(const s of STATS){ const v=parseInt(r[s]); st[s]=isNaN(v)?null:v; if(isNaN(v)) ok=false; else cp+=v; }
+  r.stats=st; r.cp=ok?cp:null;
+  // moves: base list, then the chosen variant, then the form's own moves (by slot)
+  const baseMoves=mon.moves.filter(x=>!x.variant);
+  const slots=[...new Set(mon.moves.map(x=>+x.slot))].sort((a,b)=>a-b);
+  const out=slots.map(s=>{
+    let mv=baseMoves.find(x=>+x.slot===s) || null, state="";
+    if(variant){ const v=mon.moves.find(x=>+x.slot===s && x.variant===variant); if(v){ mv=Object.assign({},mv||{},nonEmpty(v)); state="hl"; } }
+    if(f){
+      const fm=(f._moves||[]).find(x=>+x.slot===s && (!x.variant||x.variant===variant));
+      if(fm){ const from=mv; mv=Object.assign({},mv||{},nonEmpty(fm)); if(f.form==="z"){ state="hl"; mv._from=from; } }
+      else if(f.form==="z") state="dim";
+    }
+    return mv?{...mv,_state:state}:null;
+  }).filter(Boolean);
+  r.moves=out;
+  return r;
+}
+const nonEmpty=o=>{const r={};for(const k in o) if(o[k]!=="") r[k]=o[k]; return r;};
+
+/* =========================================================
+   Images: try each path in turn, then fall back
+   ========================================================= */
+const slug=s=>(s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/['’.]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+function img(paths, fallbackHTML="", cls=""){
+  paths=paths.filter(Boolean);
+  const fb=encodeURIComponent(fallbackHTML);
+  return `<img ${cls?`class="${cls}"`:""} src="${paths[0]}" data-alt="${paths.slice(1).join("|")}" data-fb="${fb}" alt="" loading="lazy" onerror="imgFail(this)">`;
+}
+function imgFail(el){
+  const rest=(el.dataset.alt||"").split("|").filter(Boolean);
+  if(rest.length){ el.dataset.alt=rest.slice(1).join("|"); el.src=rest[0]; return; }
+  const fb=decodeURIComponent(el.dataset.fb||"");
+  if(fb){ const t=document.createElement("template"); t.innerHTML=fb; el.replaceWith(t.content); } else el.remove();
+}
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const ICON={
+  pin:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>`,
+  star:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.8 6.1 6.7.7-5 4.5 1.4 6.6L12 17l-5.9 3.4 1.4-6.6-5-4.5 6.7-.7z"/></svg>`,
+  bag:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8h12l-1 12H7z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>`,
+  person:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>`,
+  home:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>`,
+  ball:`<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff" stroke="#1E1F24" stroke-width="2"/><path d="M1 16a15 15 0 0 1 30 0z" fill="#E3350D" stroke="#1E1F24" stroke-width="2"/><circle cx="16" cy="16" r="4.5" fill="#fff" stroke="#1E1F24" stroke-width="2"/></svg>`,
+  ballOutline:`<svg viewBox="0 0 32 32" fill="none" stroke="#1E1F24" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M2 16h9M21 16h9"/><circle cx="16" cy="16" r="4.5"/></svg>`
+};
+const icon=(name, fb)=>img([`icons/${name}.png`], fb);
+
+function typeIcon(t, tera){
+  const c=(TYPES[t]||["","","#888"])[2];
+  const fb=`<i style="font-size:${typeName(t).length>3?9:11}px">${esc(typeName(t))}</i>`;
+  const p= tera ? [`types/tera-${t}.png`,`types/${t}.png`] : [`types/${t}.png`];
+  return `<span class="ticon" title="${esc(typeName(t))}" style="background:${c}">${img(p,fb)}</span>`;
+}
+function lum(hex){ const m=/^#?([0-9a-f]{6})$/i.exec(hex||""); if(!m) return 1; const n=parseInt(m[1],16); const c=[n>>16,n>>8&255,n&255].map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}); return .2126*c[0]+.7152*c[1]+.0722*c[2]; }
+const pokeImg=(id,baseId,name,cls)=>img([`pokemon/${id}.png`, id!==baseId?`pokemon/${baseId}.png`:null], `<div class="ini">${esc((name||"?").slice(0, LANG==="zh"?1:2))}</div>`, cls);
+
+/* =========================================================
+   Load
+   ========================================================= */
+async function load(){
+  try{
+    const g=await fetch("games.csv",{cache:"no-cache"}); if(!g.ok) throw 0;
+    GAMES=sections(await g.text()).main.filter(x=>x.no).map(x=>({...x,no:x.no.padStart(2,"0"),generation:+x.generation}));
+  }catch(e){ LOAD_ERR=true; render(); return; }
+  await Promise.all(GAMES.map(async g=>{
+    try{ const r=await fetch(`data/${g.no}.csv`,{cache:"no-cache"}); if(r.ok) SQUADS[g.no]=buildSquad(sections(await r.text())); }catch(e){}
+  }));
+  LOADED=true; render();
+}
+
+/* =========================================================
+   Views
+   ========================================================= */
+const app=document.getElementById("app");
+const gameTitle=g=>L(g,"title");
+const gameMeta=g=>[g.year, g.platform, L(g,"region")].filter(Boolean).join(" · ");
+
+function render(){
+  if(LOAD_ERR){ app.innerHTML=`<div class="err">${T("loadErr")}</div>`; return; }
+  if(!LOADED) return;
+  const h=location.hash.replace(/^#\/?/,"").split("/");
+  if(h[0]==="game") renderGame(h[1]); else renderHome();
+}
+window.addEventListener("hashchange",()=>{render(); window.scrollTo(0,0);});
+
+function renderHome(){
+  const logged=GAMES.filter(g=>SQUADS[g.no]);
+  const all=logged.flatMap(g=>SQUADS[g.no]);
+  const species=new Set(all.map(m=>m.base.name_en||m.base.name_zh));
+  let html=`<section class="hero"><h1>${T("title")}</h1><p>${T("sub")}</p>
+    <div class="tiles">
+      <div class="tile"><b>${GAMES.length}</b><span>${T("games")}</span></div>
+      <div class="tile"><b>${logged.length}</b><span>${T("logged")}</span></div>
+      <div class="tile"><b>${all.length}</b><span>${T("pokemon")}</span></div>
+      <div class="tile"><b>${species.size}</b><span>${T("species")}</span></div>
+    </div></section>`;
+  let gen=0;
+  for(const g of GAMES){
+    if(g.generation!==gen){ gen=g.generation; html+=`<div class="gen-h"><h2>${UI[LANG].gen(gen)}</h2></div>`; }
+    const sq=SQUADS[g.no];
+    const tag=sq?"a":"div";
+    const mons = sq ? sq.map(m=>`<div class="mon" style="background:${m.base.color||"#eee"}55" title="${esc(L(m.base,"name"))}">${pokeImg(m.id,m.id,L(m.base,"name"))}</div>`).join("")
+                    : Array.from({length:6},()=>`<div class="empty">${ICON.ballOutline}</div>`).join("");
+    html+=`<${tag} class="grow${sq?"":" pending"}" ${sq?`href="#/game/${g.no}"`:""} style="--gc:${g.color||"#888"}">
+      <div class="spine"></div>
+      <div class="box">${img([`games/${g.no}.png`,`games/${g.no}.jpg`],`<span class="ph">${g.no}</span>`)}</div>
+      <div class="ginfo"><div class="no">#${g.no}</div><div class="t">${esc(gameTitle(g))}</div>
+        <div class="m">${esc(gameMeta(g))}${sq?"":` · <span class="soon">${T("soon")}</span>`}</div></div>
+      <div class="squad">${mons}</div></${tag}>`;
+  }
+  app.innerHTML=html;
+}
+
+const STATE={}; // per card: {form:-1|idx, variant:""}
+
+function renderGame(no){
+  const i=GAMES.findIndex(g=>g.no===no); const g=GAMES[i];
+  if(!g){ app.innerHTML=`<a class="back" href="#/">← ${T("back")}</a><div class="note">${T("notFound")}</div>`; return; }
+  const sq=SQUADS[g.no]||[];
+  const prev=GAMES.slice(0,i).reverse().find(x=>SQUADS[x.no]), next=GAMES.slice(i+1).find(x=>SQUADS[x.no]);
+  let html=`<a class="back" href="#/">← ${T("back")}</a>
+  <section class="ghero" style="--gc:${g.color||"#555"}">
+    <div class="box">${img([`games/${g.no}.png`,`games/${g.no}.jpg`],`<span class="ph" style="font-size:40px">${g.no}</span>`)}</div>
+    <div style="position:relative;z-index:1">
+      <div class="no">#${g.no} · ${UI[LANG].gen(g.generation)}</div>
+      <h1>${esc(gameTitle(g))}</h1>
+      <div class="meta">${esc(gameMeta(g))}</div>
+      <div class="people">
+        <div class="chip"><div class="pic">${img([`players/${g.no}.png`,`players/${g.no}.jpg`],ICON.person)}</div><div><small>${T("player")}</small><b>${esc(L(g,"player"))}</b></div></div>
+        <div class="chip"><div class="pic">${img([`places/${g.no}-${slug(g.hometown_en)}.png`,`places/${slug(g.hometown_en)}.png`],ICON.home)}</div><div><small>${T("hometown")}</small><b>${esc(L(g,"hometown"))}</b></div></div>
+      </div>
+    </div>
+  </section>`;
+  if(sq.length){
+    html+=`<nav class="jump">${sq.map(m=>`<a href="#/game/${g.no}" data-jump="c-${m.id}"><span class="dot" style="background:${m.base.color}66">${pokeImg(m.id,m.id,L(m.base,"name"))}</span>${esc(L(m.base,"name"))}</a>`).join("")}</nav>`;
+    html+=`<div class="cards">${sq.map(m=>`<article class="card" id="c-${m.id}"></article>`).join("")}</div>`;
+  } else html+=`<div class="note">${T("soon")}</div>`;
+  html+=`<div class="pager">${prev?`<a href="#/game/${prev.no}"><small>← ${T("prev")}</small>${esc(gameTitle(prev))}</a>`:"<span></span>"}${next?`<a href="#/game/${next.no}" style="text-align:right"><small>${T("next")} →</small>${esc(gameTitle(next))}</a>`:""}</div>`;
+  app.innerHTML=html;
+  app.querySelectorAll("[data-jump]").forEach(a=>a.onclick=e=>{e.preventDefault(); document.getElementById(a.dataset.jump).scrollIntoView({behavior:"smooth"});});
+  sq.forEach(m=>drawCard(g,m));
+}
+
+function drawCard(g,mon){
+  const el=document.getElementById("c-"+mon.id);
+  const st=STATE[mon.id]||(STATE[mon.id]={form:-1,variant:""});
+  const v=view(mon, st.form, st.variant);
+  const name=L(mon.base,"name");
+  const formLabel = st.form>=0 ? L(mon.forms[st.form],"form") : "";
+  const color=v.color||"#ddd";
+  el.style.setProperty("--pc",color);
+  el.classList.toggle("dark", lum(color)<.32);
+
+  const isTera=v.form==="tera";
+  const types=[v.type1,v.type2].filter(Boolean);
+  const typeHTML = isTera ? `<span class="tera-tag">${T("tera")} ${typeIcon(v.type1,true)}</span>` : types.map(t=>typeIcon(t)).join("");
+
+  // toggle buttons: forms, then move variants
+  let tg="";
+  mon.forms.forEach((f,idx)=>{
+    tg+=`<button class="tg${st.form===idx?" on":""}${""}" data-form="${idx}" title="${esc(L(f,"form"))}">${img([`icons/form-${f.form||"alt"}.png`], esc(FORM_FALLBACK[f.form]||FORM_FALLBACK.alt))}</button>`;
+  });
+  mon.variants.forEach(k=>{
+    tg+=`<button class="tg${st.variant===k?" on":""}" data-variant="${k}" title="${esc(UI[LANG].variants[k]||k)}">${img([`icons/style-${k}.png`], esc(VARIANT_FALLBACK[k]||k))}</button>`;
+  });
+
+  const movesHTML=v.moves.map(m=>{
+    const from = m._from && m._from.move_en ? `<span class="from">${T("from")} · ${esc(L(m._from,"move"))}</span>` : "";
+    const dmg = m.damage ? esc(m.damage) : "—";
+    return `<div class="mv ${m._state}">${m.type?typeIcon(m.type):"<span></span>"}<div class="n">${esc(L(m,"move"))}${from}</div><div class="d${m.damage?"":" none"}">${dmg}</div></div>`;
+  }).join("");
+
+  const foot=[];
+  if(v.item_en||v.item_zh) foot.push(`<div class="fi" title="${T("item")}"><span class="ic">${img([`items/${slug(v.item_en)}.png`,"icons/item.png"],ICON.bag)}</span>${esc(L(v,"item"))}</div>`);
+  if(v.ability_en||v.ability_zh) foot.push(`<div class="fi" title="${T("ability")}"><span class="ic">${icon("ability",ICON.star)}</span>${esc(L(v,"ability"))}</div>`);
+  if(v.location_en||v.location_zh){
+    const ls=slug(v.location_en);
+    foot.push(`<div class="fi" title="${T("location")}">${img([`places/${g.no}-${ls}.png`,`places/${ls}.png`],`<span class="ic">${img(["icons/location.png"],ICON.pin)}</span>`,"place")}${esc(L(v,"location"))}</div>`);
+  }
+
+  el.innerHTML=`
+    <div class="c-head">
+      <span class="ball">${img(["icons/pokeball.png"],ICON.ball)}</span>
+      <span class="c-name">${esc(name)}</span>${formLabel?`<span class="c-form">${esc(formLabel)}</span>`:""}
+      ${tg?`<div class="toggles">${tg}</div>`:""}
+      <div class="sp"></div>
+      ${v.cp!=null?`<div class="c-cp"><small>${T("cp")}</small><b>${v.cp}</b></div>`:""}
+      <div class="c-types">${typeHTML}</div>
+    </div>
+    <div class="c-body">
+      <div class="c-art">${pokeImg(v.id, mon.id, name)}</div>
+      ${radar(v.stats)}
+      <div class="moves">${movesHTML}</div>
+    </div>
+    <div class="c-foot">${foot.join("")}<div class="sp"></div>${v.bst?`<div class="bst">${T("bst")} <b>${esc(v.bst)}</b></div>`:""}</div>`;
+
+  el.querySelectorAll("[data-form]").forEach(b=>b.onclick=()=>{ const k=+b.dataset.form; st.form = st.form===k?-1:k; drawCard(g,mon); });
+  el.querySelectorAll("[data-variant]").forEach(b=>b.onclick=()=>{ const k=b.dataset.variant; st.variant = st.variant===k?"":k; drawCard(g,mon); });
+}
+
+/* Hexagon radar, same orientation as the cards: HP top, then clockwise Atk, Def, Speed, Sp.Def, Sp.Atk */
+function radar(s){
+  const order=["hp","atk","def","spe","spd","spa"];
+  const W=290,H=230,cx=145,cy=118,R=72;
+  const vals=order.map(k=>s[k]);
+  if(vals.every(x=>x==null)) return `<div></div>`;
+  const max=Math.max(500,...vals.filter(x=>x!=null));
+  const pt=(i,r)=>{const a=-Math.PI/2+i*Math.PI/3; return [cx+r*Math.cos(a), cy+r*Math.sin(a)];};
+  const ring=f=>order.map((_,i)=>pt(i,R*f).join(",")).join(" ");
+  const shape=order.map((k,i)=>pt(i,R*Math.max(0,(s[k]||0))/max).join(",")).join(" ");
+  const lab=order.map((k,i)=>{
+    const [x,y]=pt(i,R+22); const anchor = i===0||i===3 ? "middle" : (i<3?"start":"end");
+    const dx = i===0||i===3?0:(i<3?-8:8);
+    return `<text x="${x+dx}" y="${y+(i===0?-2:i===3?8:4)}" text-anchor="${anchor}" font-size="13"><tspan font-weight="700">${s[k]??"–"}</tspan><tspan dx="4" font-size="11.5" opacity=".75">${UI[LANG].stats[k]}</tspan></text>`;
+  }).join("");
+  return `<svg class="radar" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">
+    <polygon points="${ring(1)}" fill="rgba(255,255,255,.18)" stroke="currentColor" stroke-opacity=".18"/>
+    <polygon points="${ring(.66)}" fill="none" stroke="currentColor" stroke-opacity=".14"/>
+    <polygon points="${ring(.33)}" fill="none" stroke="currentColor" stroke-opacity=".12"/>
+    <polygon points="${shape}" fill="rgba(255,255,255,.78)" stroke="#fff" stroke-width="1.5"/>
+    ${lab}</svg>`;
+}
+
+setLang(LANG);
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+01-1,,,,Blastoise,水箭龟,water,,#84ACD8,,,,,Pallet Town,真新镇,510,361,264,298,268,268,254
+01-2,,,,Sandslash,穿山王,ground,,#B19166,,,,,Route 4,4号道路,460,353,298,318,208,208,228
+01-3,,,,Dodrio,嘟嘟利,normal,flying,#DCB99B,,,,,Route 16,16号道路,460,323,318,238,218,218,298
+01-4,,,,Rapidash,烈焰马,fire,,#F7F2CA,,,,,Pokémon Mansion,宝可梦屋,500,333,298,238,258,258,308
+01-5,,,,Alakazam,胡地,psychic,,#F2DD44,,,,,Route 24,24号道路,540,313,198,188,368,368,338
+01-6,,,,Dragonite,快龙,dragon,flying,#F0B46C,,,,,Safari Zone,狩猎地带,600,385,366,288,298,298,258
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+01-1,1,,Surf,冲浪,water,167
+01-1,2,,Blizzard,暴风雪,ice,140
+01-1,3,,Submission,深渊翻滚,fighting,93
+01-1,4,,Strength,怪力,normal,93
+01-2,1,,Earthquake,地震,ground,195
+01-2,2,,Rock Slide,岩崩,rock,98
+01-2,3,,Cut,居合劈,normal,66
+01-2,4,,Swords Dance,剑舞,normal,
+01-3,1,,Tri Attack,三重攻击,normal,167
+01-3,2,,Double Team,影子分身,normal,
+01-3,3,,Drill Peck,啄钻,flying,167
+01-3,4,,Fly,飞翔,flying,146
+01-4,1,,Fire Blast,大字爆炎,fire,202
+01-4,2,,Fire Spin,火焰旋涡,fire,61
+01-4,3,,Stomp,踩踏,normal,85
+01-4,4,,Agility,高速移动,psychic,
+01-5,1,,Psychic,精神强念,psychic,216
+01-5,2,,Reflect,反射壁,psychic,
+01-5,3,,Recover,自我再生,normal,
+01-5,4,,Flash,闪光,normal,
+01-6,1,,Dragon Rage,龙之怒,dragon,40
+01-6,2,,Hyper Beam,破坏光线,normal,237
+01-6,3,,Thunderbolt,十万伏特,electric,123
+01-6,4,,Ice Beam,冰冻光束,ice,123
