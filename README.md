@@ -86,10 +86,8 @@ Every image is optional. Until one exists, the site shows a clean fallback (colo
 | Folder | File name | What |
 |---|---|---|
 | `games/` | `01.png` … `21.png` | box art, 528 × 704 px (3:4 portrait). Shown uncropped on the home list and the game banner |
-| `players/` | `01.png` … | main character portrait |
+| `players/` | `01.png` … | main character as a **transparent-background cut-out** (about 600 × 800 px, 3:4), standing at the right of the game banner. If there's no file, the banner simply goes without |
 | `pokemon/` | `01-1.png`, `16-4b.png` … | artwork. A form without its own image falls back to the base image |
-| `places/` | `pallet-town.png` | hometown (game banner) and caught-at locations, named by **slug** of the English name. A caught-at place image becomes the backdrop behind that Pokémon's artwork |
-| `places/` | `17-pallet-town.png` | optional per-game override (checked first) |
 | `balls/` | `poke-ball.png`, `great-ball.png`, `ultra-ball.png`, `master-ball.png`, `safari-ball.png`… | one icon per ball type, named by slug of `ball_en`. The nine already in the folder are stand-ins taken from your Word file. Replace them with your own |
 | `items/` | `incinium-z.png`, `ampharosite.png` | held items, by slug |
 | `types/` | `water.png` … `fairy.png`, `stellar.png` | type icons, shown small (about 20px) on type chips and move tiles. Transparent background works best |
