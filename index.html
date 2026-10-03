@@ -168,8 +168,11 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
   .squad .mon img{width:44px;height:44px}
   .squad .mon .ini{width:34px;height:34px;font-size:12px}
   .ginfo .t{font-size:16px}
-  .ghero{grid-template-columns:auto 1fr;grid-template-areas:"box trainer" "info info";gap:16px 16px;padding:18px}
-  .ghero .trainer{justify-self:end;margin-bottom:0}
+  .ghero{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"box trainer" "head trainer" "facts facts";gap:16px 12px;padding:18px;align-items:start}
+  .ghero .info{display:contents}
+  .ghero .head{grid-area:head;position:relative;z-index:1;min-width:0;align-self:end}
+  .ghero .facts{grid-area:facts;margin-top:0;position:relative;z-index:1}
+  .ghero .trainer{justify-self:end;align-self:end;margin-bottom:0!important}
   .ghero .trainer img{height:150px;max-width:150px}
   .ghero .facts dd{font-size:15px}
   .ghero .box{width:105px;height:140px}
@@ -190,20 +193,20 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
    Text that is not data: UI labels and type names
    ========================================================= */
 const UI = {
-  en:{brand:"My Pokémon Squads", title:"My Pokémon squads", sub:"The team I finished each game with — one squad per game, from Kanto to Paldea.",
+  en:{brand:"Pokémon Squads", title:"My Pokémon squads", sub:"The team I finished each game with — one squad per game, from Kanto to Paldea.",
       games:"Games", logged:"Squads logged", pokemon:"Pokémon", species:"Species",
       gen:n=>"Generation "+["","I","II","III","IV","V","VI","VII","VIII","IX","X"][n],
-      soon:"Squad not added yet", back:"All games", player:"Player", hometown:"Hometown",
-      ability:"Ability", item:"Held item", location:"Caught at", ball:"Ball", bst:"Base stats", cp:"CP",
+      soon:"Squad not added yet", back:"All games", player:"Trainer", hometown:"Hometown", region:"Region",
+      ability:"Ability", item:"Held item", location:"Met at", ball:"Ball", bst:"Base stats", cp:"CP",
       prev:"Previous", next:"Next", base:"Base", from:"from",
       stats:{hp:"HP",atk:"Atk",def:"Def",spa:"Sp. Atk",spd:"Sp. Def",spe:"Speed"},
       loadErr:"Couldn't load the data files. If you opened index.html directly from your disk, run it through a local server or GitHub Pages instead (browsers block reading CSVs from file://).",
       variants:{agile:"Agile Style",strong:"Strong Style",plus:"Plus Move"}, tera:"Tera Type", notFound:"Game not found."},
-  zh:{brand:"我的宝可梦队伍", title:"我的宝可梦队伍", sub:"每一作通关时的主力阵容 —— 从关都到帕底亚，一作一队。",
+  zh:{brand:"Pokémon Squads", title:"我的宝可梦队伍", sub:"每一作通关时的主力阵容 —— 从关都到帕底亚，一作一队。",
       games:"游戏", logged:"已录入队伍", pokemon:"宝可梦", species:"种类",
       gen:n=>"第"+["","一","二","三","四","五","六","七","八","九","十"][n]+"世代",
-      soon:"队伍尚未录入", back:"全部游戏", player:"主角", hometown:"故乡",
-      ability:"特性", item:"携带物品", location:"捕获地点", ball:"球种", bst:"种族值", cp:"CP",
+      soon:"队伍尚未录入", back:"全部游戏", player:"训练家", hometown:"故乡", region:"地区",
+      ability:"特性", item:"携带物品", location:"相遇地点", ball:"球种", bst:"种族值", cp:"CP",
       prev:"上一作", next:"下一作", base:"原形态", from:"原招式",
       stats:{hp:"HP",atk:"攻击",def:"防御",spa:"特攻",spd:"特防",spe:"速度"},
       loadErr:"无法读取数据文件。如果是直接从本地双击打开 index.html，请改用本地服务器或 GitHub Pages（浏览器不允许从 file:// 读取 CSV）。",
@@ -376,7 +379,8 @@ async function load(){
    ========================================================= */
 const app=document.getElementById("app");
 const gameTitle=g=>L(g,"title");
-const gameMeta=g=>[g.year, g.platform, L(g,"region")].filter(Boolean).join(" · ");
+const regionName=g=>{const r=L(g,"region");return r?(LANG==="zh"?r+"地区":r+" Region"):""};
+const gameMeta=g=>[g.year, g.platform, regionName(g)].filter(Boolean).join(" · ");
 
 function render(){
   if(LOAD_ERR){ app.innerHTML=`<div class="err">${T("loadErr")}</div>`; return; }
@@ -416,15 +420,18 @@ function renderGame(no){
   <section class="ghero" style="--gc:${g.color||"#555"}">
     <div class="box">${img([`games/${g.no}.png`,`games/${g.no}.jpg`],`<span class="ph" style="font-size:40px">${g.no}</span>`)}</div>
     <div class="info">
-      <div class="no">#${g.no} · ${UI[LANG].gen(g.generation)}</div>
-      <h1>${esc(gameTitle(g))}</h1>
-      <div class="meta">${esc([g.year,g.platform].filter(Boolean).join(" · "))}</div>
+      <div class="head">
+        <div class="no">#${g.no} · ${UI[LANG].gen(g.generation)}</div>
+        <h1>${esc(gameTitle(g))}</h1>
+        <div class="meta">${esc([g.year,g.platform].filter(Boolean).join(" · "))}</div>
+      </div>
       <dl class="facts">
         <div><dt>${T("player")}</dt><dd>${esc(L(g,"player"))}</dd></div>
-        <div><dt>${T("hometown")}</dt><dd>${esc(LANG==="zh" ? [L(g,"region"),L(g,"hometown")].filter(Boolean).join(" ") : [L(g,"hometown"),L(g,"region")].filter(Boolean).join(", "))}</dd></div>
+        <div><dt>${T("hometown")}</dt><dd>${esc(L(g,"hometown"))}</dd></div>
+        <div><dt>${T("region")}</dt><dd>${esc(L(g,"region"))}</dd></div>
       </dl>
     </div>
-    <div class="trainer">${img([`players/${g.no}.png`,`players/${g.no}.jpg`],"")}</div>
+    <div class="trainer">${img([`trainers/${g.no}.png`,`trainers/${g.no}.jpg`],"")}</div>
   </section>`;
   if(sq.length){
     html+=`<div class="party">${sq.map(m=>`<article class="pc" id="c-${m.id}"></article>`).join("")}</div>`;
