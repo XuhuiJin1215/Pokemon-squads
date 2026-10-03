@@ -80,76 +80,79 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .chip small{display:block;font-size:11px;opacity:.75;text-transform:uppercase;letter-spacing:.8px}
 html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
 .chip b{font-size:15px;font-weight:600}
-.jump{display:flex;gap:8px;margin:18px 0 6px;flex-wrap:wrap}
-.jump a{display:flex;align-items:center;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px 12px 3px 3px;font-size:13px;font-weight:500}
-.jump a .dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;overflow:hidden}
-.jump a .dot img{width:30px;height:30px;object-fit:contain}
 .pager{display:flex;justify-content:space-between;margin-top:26px;gap:12px}
 .pager a{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px;max-width:48%}
 .pager a small{display:block;color:var(--muted);font-size:12px}
 .pager a:hover{border-color:#cfcac0}
 
-/* ---------- pokémon card ---------- */
-.cards{display:flex;flex-direction:column;gap:18px;margin-top:18px}
-.card{--fg:#1E1F24;--sub:rgba(30,31,36,.62);--glass:rgba(255,255,255,.38);background:var(--pc);color:var(--fg);border-radius:22px;padding:18px 22px 16px;position:relative;scroll-margin-top:80px;transition:background .25s}
-.card.dark{--fg:#fff;--sub:rgba(255,255,255,.75);--glass:rgba(255,255,255,.16)}
-.c-head{display:flex;align-items:center;gap:10px;min-height:40px}
-.c-head .ball{width:26px;height:26px;flex:none;display:grid}
-.c-head .ball img,.c-head .ball svg{width:26px;height:26px}
-.c-name{white-space:nowrap}
-.c-name{font-size:28px;font-weight:700;line-height:1.1}
-.c-form{font-size:14px;font-weight:600;color:var(--sub);margin-left:2px}
-.c-head .sp{flex:1}
-.c-cp{text-align:right;line-height:1}
-.c-cp small{font-size:12px;font-weight:700;color:var(--sub);display:block;margin-bottom:2px}
-.c-cp b{font-size:26px;font-weight:700}
-.c-types{display:flex;gap:6px;margin-left:12px}
-.ticon{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;overflow:hidden;flex:none}
-.ticon img{width:100%;height:100%;object-fit:contain}
-.ticon i{font-style:normal;font-size:11px;font-weight:700;color:#fff;text-transform:uppercase}
-.tera-tag{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--sub)}
-.c-body{display:grid;grid-template-columns:220px 290px 1fr;gap:10px;align-items:center;margin-top:6px}
-.c-art{height:230px;display:grid;place-items:center}
-.c-art img{max-width:100%;max-height:230px;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.18))}
-.c-art .ini{width:150px;height:150px;border-radius:50%;background:var(--glass);display:grid;place-items:center;font-size:44px;font-weight:800;color:var(--sub)}
-.radar{width:290px;max-width:100%;height:auto;display:block}
-.radar text{font-family:var(--font);fill:var(--fg)}
-.moves{display:flex;flex-direction:column;gap:6px}
-.mv{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;padding:5px 8px 5px 4px;border-radius:12px;transition:opacity .2s,background .2s}
-.mv .ticon{width:30px;height:30px;border-radius:8px}
-.mv .n{font-size:18px;font-weight:600;line-height:1.15}
-.mv .d{font-size:18px;font-weight:600;text-align:right;min-width:44px;font-variant-numeric:tabular-nums}
-.mv .d.none{color:var(--sub);font-weight:400}
-.mv.dim{opacity:.32}
-.mv.hl{background:var(--glass);box-shadow:inset 0 0 0 2px rgba(255,214,0,.85)}
-.mv .from{display:block;font-size:12px;font-weight:500;color:var(--sub)}
-.c-foot{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;margin-top:10px;padding-top:12px;border-top:1px solid rgba(0,0,0,.08)}
-.card.dark .c-foot{border-top-color:rgba(255,255,255,.18)}
-.fi{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
-.fi .ic{width:26px;height:26px;display:grid;place-items:center;flex:none}
-.fi .ic img{width:26px;height:26px;object-fit:contain}
-.fi .ic svg{width:22px;height:22px}
-.fi img.place{width:44px;height:28px;border-radius:6px;object-fit:cover;flex:none}
-.fi small{font-weight:500;color:var(--sub);font-size:12px;margin-right:2px}
-.c-foot .sp{flex:1}
-.bst{font-size:13px;color:var(--sub);font-weight:600}
-.bst b{color:var(--fg);font-size:15px}
-.toggles{display:flex;gap:6px;margin-left:10px}
-.tg{border:0;cursor:pointer;background:var(--glass);border-radius:12px;height:38px;min-width:38px;padding:0 10px;display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--fg);transition:transform .12s,box-shadow .15s,background .15s}
-.tg img{height:28px;width:auto;max-width:56px;object-fit:contain}
-.tg:hover{transform:translateY(-1px)}
-.tg.on{background:var(--paper);color:var(--ink);box-shadow:0 0 0 2px var(--fg)}
-.tg.has-img{padding:0 5px}
+/* ---------- party cards ---------- */
+.party{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px;align-items:stretch}
+.pc{--pc:#ddd;--deep:#444;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:80px}
+.stage{position:relative;height:232px;background:var(--pc);overflow:hidden;transition:background .3s}
+.stage .bgplace{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .veil{position:absolute;inset:0;background:radial-gradient(circle at 50% 62%,rgba(255,255,255,.6) 0,rgba(255,255,255,.22) 34%,rgba(255,255,255,0) 62%)}
+.stage .bgplace ~ .veil{background:linear-gradient(to top,var(--pc) 0,color-mix(in srgb,var(--pc) 35%,transparent) 45%,rgba(0,0,0,0) 75%)}
+.stage .art{position:absolute;left:12px;right:12px;top:16px;bottom:6px;display:flex;align-items:flex-end;justify-content:center}
+.stage .art img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 8px 10px rgba(0,0,0,.22))}
+.stage .art .ini{width:132px;height:132px;margin-bottom:34px;border-radius:50%;background:rgba(255,255,255,.45);display:grid;place-items:center;font-size:40px;font-weight:800;color:rgba(0,0,0,.4)}
+.stage .art.swap{animation:swap .28s ease-out}
+@keyframes swap{from{opacity:0;transform:translateY(6px) scale(.96)}to{opacity:1;transform:none}}
+.forms{position:absolute;top:12px;right:12px;display:flex;gap:6px;z-index:2}
+.fbtn{width:38px;height:38px;border-radius:50%;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,.72);backdrop-filter:blur(4px);display:grid;place-items:center;font-size:10.5px;font-weight:800;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15);transition:transform .12s,background .15s}
+.fbtn img{width:26px;height:26px;object-fit:contain}
+.fbtn:hover{transform:scale(1.06)}
+.fbtn.on{background:var(--ink);color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.85)}
+.fbtn:focus-visible,.vbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+.pc-body{padding:14px 18px 6px}
+.pc-title{display:flex;align-items:flex-start;gap:10px}
+.pc-name{flex:1;min-width:0}
+.pc-name h3{margin:0;font-size:22px;line-height:1.15;font-weight:700}
+.pc-name .form{font-size:13px;color:var(--muted);font-weight:500;margin-top:1px}
+.cp{display:flex;align-items:baseline;gap:5px;white-space:nowrap}
+.cp small{font-size:12px;font-weight:600;color:var(--muted)}
+.cp b{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--deep)}
+.types{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+.tchip{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 10px 0 3px;border-radius:999px;color:#fff;font-size:12.5px;font-weight:600}
+.tchip .ti{width:18px;height:18px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:rgba(255,255,255,.25)}
+.tchip .ti img{width:18px;height:18px;object-fit:contain}
+.tchip.tera{background:linear-gradient(120deg,#5b8def,#b46cf0 50%,#f08fc0)}
+.stats{display:grid;grid-template-columns:auto 1fr auto;gap:5px 10px;align-items:center;font-size:12.5px}
+.stats .k{color:var(--muted)}
+.stats .bar{height:7px;border-radius:4px;background:#EDEBE6;overflow:hidden}
+.stats .bar i{display:block;height:100%;border-radius:4px;background:var(--deep);transition:width .3s}
+.stats .v{font-weight:600;font-variant-numeric:tabular-nums;text-align:right;min-width:28px}
+.variants{display:flex;gap:6px;margin:14px 0 -4px}
+.vbtn{border:1px solid var(--line);background:var(--paper);border-radius:999px;height:30px;padding:0 12px;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer}
+.vbtn img{height:20px;width:auto}
+.vbtn.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.fight{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:14px}
+.mv{--tc:#999;position:relative;min-height:62px;border-radius:12px;padding:8px 10px 7px;background:color-mix(in srgb,var(--tc) 13%,#fff);display:flex;flex-direction:column;justify-content:space-between;gap:4px;transition:opacity .2s,box-shadow .2s}
+.mv.wide{grid-column:1/-1}
+.mv .mtop{display:flex;align-items:flex-start;gap:7px}
+.mv .ti{width:20px;height:20px;border-radius:6px;flex:none;overflow:hidden;background:var(--tc);display:grid;place-items:center}
+.mv .ti img{width:20px;height:20px;object-fit:contain}
+.mv .n{font-size:14px;font-weight:600;line-height:1.2}
+.mv .d{align-self:flex-end;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:color-mix(in srgb,var(--tc) 70%,#000);line-height:1}
+.mv .d.none{font-weight:400;color:var(--muted)}
+.mv .from{font-size:11px;color:var(--muted);font-weight:500;margin-right:auto;align-self:flex-end}
+.mv .row{display:flex;align-items:flex-end;gap:6px}
+.mv.dim{opacity:.28}
+.mv.hl{background:linear-gradient(135deg,#FFF6D6,color-mix(in srgb,var(--tc) 18%,#fff));box-shadow:inset 0 0 0 2px #E8B100}
+.mv.vhl{box-shadow:inset 0 0 0 2px var(--ink)}
+.pc-foot{margin-top:auto;padding:12px 18px 16px}
+.pc-foot dl{margin:0;padding-top:12px;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13px}
+.pc-foot dt{color:var(--muted)}
+.pc-foot dd{margin:0;font-weight:500;display:flex;align-items:center;gap:6px;min-width:0}
+.pc-foot dd img{width:20px;height:20px;object-fit:contain;flex:none}
+@media (prefers-reduced-motion:reduce){.stage .art.swap{animation:none}.stats .bar i,.stage{transition:none}}
+@media (max-width:980px){.party{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.party{grid-template-columns:1fr}.stage{height:220px}}
+
 
 .note{color:var(--muted);text-align:center;padding:60px 0}
 .err{background:#fff3f0;border:1px solid #f3c9bf;color:#8a2b17;border-radius:12px;padding:14px 16px;font-size:14px}
 
-@media (max-width:860px){
-  .c-body{grid-template-columns:1fr 1fr}
-  .moves{grid-column:1/-1}
-  .c-art{height:200px}.c-art img{max-height:200px}
-  .radar{margin:0 auto}
-}
 @media (max-width:640px){
   main{padding:16px 16px 60px}
   .top-in{padding:10px 16px}
@@ -167,15 +170,6 @@ html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
   .ghero{grid-template-columns:1fr;padding:18px}
   .ghero .box{width:110px;height:110px}
   .ghero h1{font-size:26px}
-  .card{padding:14px 14px 12px}
-  .c-head{flex-wrap:wrap}
-  .c-name{font-size:22px}
-  .c-cp b{font-size:20px}
-  .c-types{margin-left:6px}.ticon{width:30px;height:30px}
-  .c-body{grid-template-columns:1fr}
-  .c-art{height:180px}.c-art img{max-height:180px}
-  .mv .n,.mv .d{font-size:16px}
-  .toggles{width:100%;margin:8px 0 0}
 }
 </style>
 </head>
@@ -196,7 +190,7 @@ const UI = {
       games:"Games", logged:"Squads logged", pokemon:"Pokémon", species:"Species",
       gen:n=>"Generation "+["","I","II","III","IV","V","VI","VII","VIII","IX","X"][n],
       soon:"Squad not added yet", back:"All games", player:"Player", hometown:"Hometown",
-      ability:"Ability", item:"Held item", location:"Caught at", bst:"Base stat total", cp:"CP",
+      ability:"Ability", item:"Held item", location:"Caught at", bst:"Base stats", cp:"CP",
       prev:"Previous", next:"Next", base:"Base", from:"from",
       stats:{hp:"HP",atk:"Atk",def:"Def",spa:"Sp. Atk",spd:"Sp. Def",spe:"Speed"},
       loadErr:"Couldn't load the data files. If you opened index.html directly from your disk, run it through a local server or GitHub Pages instead (browsers block reading CSVs from file://).",
@@ -435,16 +429,29 @@ function renderGame(no){
     </div>
   </section>`;
   if(sq.length){
-    html+=`<nav class="jump">${sq.map(m=>`<a href="#/game/${g.no}" data-jump="c-${m.id}"><span class="dot" style="background:${m.base.color}66">${pokeImg(m.id,m.id,L(m.base,"name"))}</span>${esc(L(m.base,"name"))}</a>`).join("")}</nav>`;
-    html+=`<div class="cards">${sq.map(m=>`<article class="card" id="c-${m.id}"></article>`).join("")}</div>`;
+    html+=`<div class="party">${sq.map(m=>`<article class="pc" id="c-${m.id}"></article>`).join("")}</div>`;
   } else html+=`<div class="note">${T("soon")}</div>`;
   html+=`<div class="pager">${prev?`<a href="#/game/${prev.no}"><small>← ${T("prev")}</small>${esc(gameTitle(prev))}</a>`:"<span></span>"}${next?`<a href="#/game/${next.no}" style="text-align:right"><small>${T("next")} →</small>${esc(gameTitle(next))}</a>`:""}</div>`;
   app.innerHTML=html;
-  app.querySelectorAll("[data-jump]").forEach(a=>a.onclick=e=>{e.preventDefault(); document.getElementById(a.dataset.jump).scrollIntoView({behavior:"smooth"});});
+  g._max=Math.max(500,...sq.flatMap(m=>[m.base,...m.forms]).flatMap(r=>STATS.map(k=>parseInt(r[k])||0)));
   sq.forEach(m=>drawCard(g,m));
 }
 
-function drawCard(g,mon){
+function deepen(hex){
+  const m=/^#?([0-9a-f]{6})$/i.exec(hex||""); if(!m) return "#444";
+  let n=parseInt(m[1],16), c=[n>>16,n>>8&255,n&255];
+  const toHex=a=>"#"+a.map(v=>Math.round(v).toString(16).padStart(2,"0")).join("");
+  for(let i=0;i<20 && lum(toHex(c))>.12;i++) c=c.map(v=>v*.86);
+  return toHex(c);
+}
+function typeChip(t,tera){
+  const c=(TYPES[t]||["","","#888"])[2];
+  const p= tera ? [`types/tera-${t}.png`,`types/${t}.png`] : [`types/${t}.png`];
+  return `<span class="tchip${tera?" tera":""}" style="${tera?"":`background:${c}`}"><span class="ti">${img(p,"")}</span>${tera?esc(T("tera"))+" · ":""}${esc(typeName(t))}</span>`;
+}
+const STAT_ORDER=["hp","atk","def","spa","spd","spe"];
+
+function drawCard(g,mon,animate){
   const el=document.getElementById("c-"+mon.id);
   const st=STATE[mon.id]||(STATE[mon.id]={form:-1,variant:""});
   const v=view(mon, st.form, st.variant);
@@ -452,77 +459,60 @@ function drawCard(g,mon){
   const formLabel = st.form>=0 ? L(mon.forms[st.form],"form") : "";
   const color=v.color||"#ddd";
   el.style.setProperty("--pc",color);
-  el.classList.toggle("dark", lum(color)<.32);
+  el.style.setProperty("--deep",deepen(color));
+
+  const forms=mon.forms.map((f,idx)=>`<button class="fbtn${st.form===idx?" on":""}" data-form="${idx}" title="${esc(L(f,"form"))}" aria-label="${esc(L(f,"form"))}" aria-pressed="${st.form===idx}">${img([`icons/form-${f.form||"alt"}.png`], esc(FORM_FALLBACK[f.form]||FORM_FALLBACK.alt))}</button>`).join("");
+  const variants=mon.variants.map(k=>`<button class="vbtn${st.variant===k?" on":""}" data-variant="${k}" aria-pressed="${st.variant===k}">${img([`icons/style-${k}.png`],"")}${esc(UI[LANG].variants[k]||k)}</button>`).join("");
 
   const isTera=v.form==="tera";
-  const types=[v.type1,v.type2].filter(Boolean);
-  const typeHTML = isTera ? `<span class="tera-tag">${T("tera")} ${typeIcon(v.type1,true)}</span>` : types.map(t=>typeIcon(t)).join("");
+  const types = isTera ? typeChip(v.type1,true) : [v.type1,v.type2].filter(Boolean).map(t=>typeChip(t)).join("");
 
-  // toggle buttons: forms, then move variants
-  let tg="";
-  mon.forms.forEach((f,idx)=>{
-    tg+=`<button class="tg${st.form===idx?" on":""}${""}" data-form="${idx}" title="${esc(L(f,"form"))}">${img([`icons/form-${f.form||"alt"}.png`], esc(FORM_FALLBACK[f.form]||FORM_FALLBACK.alt))}</button>`;
-  });
-  mon.variants.forEach(k=>{
-    tg+=`<button class="tg${st.variant===k?" on":""}" data-variant="${k}" title="${esc(UI[LANG].variants[k]||k)}">${img([`icons/style-${k}.png`], esc(VARIANT_FALLBACK[k]||k))}</button>`;
-  });
-
-  const movesHTML=v.moves.map(m=>{
-    const from = m._from && m._from.move_en ? `<span class="from">${T("from")} · ${esc(L(m._from,"move"))}</span>` : "";
-    const dmg = m.damage ? esc(m.damage) : "—";
-    return `<div class="mv ${m._state}">${m.type?typeIcon(m.type):"<span></span>"}<div class="n">${esc(L(m,"move"))}${from}</div><div class="d${m.damage?"":" none"}">${dmg}</div></div>`;
+  const max=g._max||500;
+  const stats=STAT_ORDER.map(k=>{
+    const x=v.stats[k];
+    return `<span class="k">${UI[LANG].stats[k]}</span><span class="bar"><i style="width:${x==null?0:Math.min(100,x/max*100)}%"></i></span><span class="v">${x??"–"}</span>`;
   }).join("");
 
-  const foot=[];
-  if(v.item_en||v.item_zh) foot.push(`<div class="fi" title="${T("item")}"><span class="ic">${img([`items/${slug(v.item_en)}.png`,"icons/item.png"],ICON.bag)}</span>${esc(L(v,"item"))}</div>`);
-  if(v.ability_en||v.ability_zh) foot.push(`<div class="fi" title="${T("ability")}"><span class="ic">${icon("ability",ICON.star)}</span>${esc(L(v,"ability"))}</div>`);
-  if(v.location_en||v.location_zh){
-    const ls=slug(v.location_en);
-    foot.push(`<div class="fi" title="${T("location")}">${img([`places/${g.no}-${ls}.png`,`places/${ls}.png`],`<span class="ic">${img(["icons/location.png"],ICON.pin)}</span>`,"place")}${esc(L(v,"location"))}</div>`);
-  }
+  const n=v.moves.length;
+  const fight=v.moves.map((m,i)=>{
+    const tc=(TYPES[m.type]||["","","#999"])[2];
+    const cls=[m._state==="dim"?"dim":"", m._state==="hl"&&v.form==="z"?"hl":"", m._state==="hl"&&v.form!=="z"?"vhl":"", (n%2===1&&i===n-1)?"wide":""].join(" ");
+    const from = m._from && (m._from.move_en||m._from.move_zh) ? `<span class="from">${T("from")} ${esc(L(m._from,"move"))}</span>` : "";
+    return `<div class="mv ${cls}" style="--tc:${tc}">
+      <div class="mtop"><span class="ti" title="${esc(typeName(m.type))}">${img([`types/${m.type}.png`],"")}</span><span class="n">${esc(L(m,"move"))}</span></div>
+      <div class="row">${from}<span class="d${m.damage?"":" none"}" style="margin-left:auto">${m.damage?esc(m.damage):"—"}</span></div></div>`;
+  }).join("");
+
+  const ls=slug(v.location_en);
+  const rows=[];
+  if(v.location_en||v.location_zh) rows.push([T("location"), esc(L(v,"location"))]);
+  if(v.item_en||v.item_zh) rows.push([T("item"), img([`items/${slug(v.item_en)}.png`],"")+esc(L(v,"item"))]);
+  if(v.ability_en||v.ability_zh) rows.push([T("ability"), esc(L(v,"ability"))]);
+  if(v.bst) rows.push([T("bst"), esc(v.bst)]);
 
   el.innerHTML=`
-    <div class="c-head">
-      <span class="ball">${img(["icons/pokeball.png"],ICON.ball)}</span>
-      <span class="c-name">${esc(name)}</span>${formLabel?`<span class="c-form">${esc(formLabel)}</span>`:""}
-      ${tg?`<div class="toggles">${tg}</div>`:""}
-      <div class="sp"></div>
-      ${v.cp!=null?`<div class="c-cp"><small>${T("cp")}</small><b>${v.cp}</b></div>`:""}
-      <div class="c-types">${typeHTML}</div>
+    <div class="stage">
+      ${ls?img([`places/${g.no}-${ls}.png`,`places/${ls}.png`],"","bgplace"):""}
+      <div class="veil"></div>
+      <div class="art${animate?" swap":""}">${pokeImg(v.id, mon.id, name)}</div>
+      ${forms?`<div class="forms">${forms}</div>`:""}
     </div>
-    <div class="c-body">
-      <div class="c-art">${pokeImg(v.id, mon.id, name)}</div>
-      ${radar(v.stats)}
-      <div class="moves">${movesHTML}</div>
+    <div class="pc-body">
+      <div class="pc-title">
+        <div class="pc-name"><h3>${esc(name)}</h3>${formLabel?`<div class="form">${esc(formLabel)}</div>`:""}</div>
+        ${v.cp!=null?`<div class="cp"><small>${T("cp")}</small><b>${v.cp}</b></div>`:""}
+      </div>
+      <div class="types">${types}</div>
+      <div class="stats">${stats}</div>
+      ${variants?`<div class="variants">${variants}</div>`:""}
+      <div class="fight">${fight}</div>
     </div>
-    <div class="c-foot">${foot.join("")}<div class="sp"></div>${v.bst?`<div class="bst">${T("bst")} <b>${esc(v.bst)}</b></div>`:""}</div>`;
+    <div class="pc-foot"><dl>${rows.map(r=>`<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join("")}</dl></div>`;
 
-  el.querySelectorAll("[data-form]").forEach(b=>b.onclick=()=>{ const k=+b.dataset.form; st.form = st.form===k?-1:k; drawCard(g,mon); });
-  el.querySelectorAll("[data-variant]").forEach(b=>b.onclick=()=>{ const k=b.dataset.variant; st.variant = st.variant===k?"":k; drawCard(g,mon); });
+  el.querySelectorAll("[data-form]").forEach(b=>b.onclick=()=>{ const k=+b.dataset.form; st.form = st.form===k?-1:k; drawCard(g,mon,true); });
+  el.querySelectorAll("[data-variant]").forEach(b=>b.onclick=()=>{ const k=b.dataset.variant; st.variant = st.variant===k?"":k; drawCard(g,mon,false); });
 }
 
-/* Hexagon radar, same orientation as the cards: HP top, then clockwise Atk, Def, Speed, Sp.Def, Sp.Atk */
-function radar(s){
-  const order=["hp","atk","def","spe","spd","spa"];
-  const W=290,H=230,cx=145,cy=118,R=72;
-  const vals=order.map(k=>s[k]);
-  if(vals.every(x=>x==null)) return `<div></div>`;
-  const max=Math.max(500,...vals.filter(x=>x!=null));
-  const pt=(i,r)=>{const a=-Math.PI/2+i*Math.PI/3; return [cx+r*Math.cos(a), cy+r*Math.sin(a)];};
-  const ring=f=>order.map((_,i)=>pt(i,R*f).join(",")).join(" ");
-  const shape=order.map((k,i)=>pt(i,R*Math.max(0,(s[k]||0))/max).join(",")).join(" ");
-  const lab=order.map((k,i)=>{
-    const [x,y]=pt(i,R+22); const anchor = i===0||i===3 ? "middle" : (i<3?"start":"end");
-    const dx = i===0||i===3?0:(i<3?-8:8);
-    return `<text x="${x+dx}" y="${y+(i===0?-2:i===3?8:4)}" text-anchor="${anchor}" font-size="13"><tspan font-weight="700">${s[k]??"–"}</tspan><tspan dx="4" font-size="11.5" opacity=".75">${UI[LANG].stats[k]}</tspan></text>`;
-  }).join("");
-  return `<svg class="radar" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">
-    <polygon points="${ring(1)}" fill="rgba(255,255,255,.18)" stroke="currentColor" stroke-opacity=".18"/>
-    <polygon points="${ring(.66)}" fill="none" stroke="currentColor" stroke-opacity=".14"/>
-    <polygon points="${ring(.33)}" fill="none" stroke="currentColor" stroke-opacity=".12"/>
-    <polygon points="${shape}" fill="rgba(255,255,255,.78)" stroke="#fff" stroke-width="1.5"/>
-    ${lab}</svg>`;
-}
 
 setLang(LANG);
 load();

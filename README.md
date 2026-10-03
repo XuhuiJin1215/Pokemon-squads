@@ -86,12 +86,11 @@ Every image is optional. Until one exists, the site shows a clean fallback (colo
 | `games/` | `01.png` … `21.png` | box art (square crop looks best) |
 | `players/` | `01.png` … | main character portrait |
 | `pokemon/` | `01-1.png`, `16-4b.png` … | artwork. A form without its own image falls back to the base image |
-| `places/` | `pallet-town.png` | hometown and caught-at locations, named by **slug** of the English name |
+| `places/` | `pallet-town.png` | hometown (game banner) and caught-at locations, named by **slug** of the English name. A caught-at place image becomes the backdrop behind that Pokémon's artwork |
 | `places/` | `17-pallet-town.png` | optional per-game override (checked first) |
 | `items/` | `incinium-z.png`, `ampharosite.png` | held items, by slug |
-| `types/` | `water.png` … `fairy.png`, `stellar.png` | square type icons (moves + Pokémon types) |
+| `types/` | `water.png` … `fairy.png`, `stellar.png` | type icons, shown small (about 20px) on type chips and move tiles. Transparent background works best |
 | `types/` | `tera-water.png` … `tera-stellar.png` | Tera type icons |
-| `icons/` | `pokeball.png`, `ability.png`, `item.png`, `location.png` | card UI icons |
 | `icons/` | `form-*.png`, `style-*.png` | toggle buttons (tables above) |
 
 **Slug rule:** lower-case, accents removed, apostrophes and full stops dropped, anything else non-alphanumeric becomes `-`. For example `Pokémon Mansion` → `pokemon-mansion`, `Hau'oli Outskirts` → `hauoli-outskirts`, `Thrifty Megamart (Abandoned Site)` → `thrifty-megamart-abandoned-site`.
