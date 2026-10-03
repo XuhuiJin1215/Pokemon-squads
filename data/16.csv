@@ -1,17 +1,17 @@
 #pokemon
-id,form,form_en,form_zh,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
-16-1,,,,Incineroar,炽焰咆哮虎,fire,dark,#E0524A,Blaze,猛火,Incinium Z,炽焰咆哮虎Z,Route 1,1号道路,530,345,361,216,176,216,206
-16-1b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,
-16-2,,,,Tsareena,甜冷美后,grass,,#D67589,Queenly Majesty,女王的威严,Grassium Z,草Z,Lush Jungle,树荫丛林,510,317,372,232,122,232,212
-16-2b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,
-16-3,,,,Politoed,蚊香蛙皇,water,,#A5D27F,Water Absorb,储水,Waterium Z,水Z,Brooklet Hill,潺潺之丘,500,321,249,186,279,236,177
-16-3b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,
-16-4,,,,Ampharos,电龙,electric,,#F2CB54,Static,静电,Ampharosite,电龙进化石,Paniola Ranch,欧哈纳牧场,510,322,167,206,361,216,209
-16-4b,mega,Mega Evolution,超级进化,,,electric,dragon,,Mold Breaker,破格,,,,,610,322,203,246,471,256,189
-16-5,,,,Mimikyu,谜拟丘,ghost,fairy,#D7D0AD,Disguise,画皮,Mimikium Z,谜拟丘Z,Thrifty Megamart (Abandoned Site),超值超市旧址,476,314,306,197,122,246,228
-16-5b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,
-16-6,,,,Kommo-o,杖尾鳞甲龙,dragon,fighting,#B8B2AE,Soundproof,隔音,Kommonium Z,杖尾鳞甲龙Z,Vast Poni Canyon,波尼大峡谷,600,291,319,286,299,246,207
-16-6b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+16-1,,,,727,Incineroar,炽焰咆哮虎,fire,dark,#E0524A,Blaze,猛火,Incinium Z,炽焰咆哮虎Z,Route 1,1号道路,530,345,361,216,176,216,206
+16-1b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,
+16-2,,,,763,Tsareena,甜冷美后,grass,,#D67589,Queenly Majesty,女王的威严,Grassium Z,草Z,Lush Jungle,树荫丛林,510,317,372,232,122,232,212
+16-2b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,
+16-3,,,,186,Politoed,蚊香蛙皇,water,,#A5D27F,Water Absorb,储水,Waterium Z,水Z,Brooklet Hill,潺潺之丘,500,321,249,186,279,236,177
+16-3b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,
+16-4,,,,181,Ampharos,电龙,electric,,#F2CB54,Static,静电,Ampharosite,电龙进化石,Paniola Ranch,欧哈纳牧场,510,322,167,206,361,216,209
+16-4b,mega,Mega Evolution,超级进化,,,,electric,dragon,,Mold Breaker,破格,,,,,610,322,203,246,471,256,189
+16-5,,,,778,Mimikyu,谜拟丘,ghost,fairy,#D7D0AD,Disguise,画皮,Mimikium Z,谜拟丘Z,Thrifty Megamart (Abandoned Site),超值超市旧址,476,314,306,197,122,246,228
+16-5b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,
+16-6,,,,784,Kommo-o,杖尾鳞甲龙,dragon,fighting,#B8B2AE,Soundproof,隔音,Kommonium Z,杖尾鳞甲龙Z,Vast Poni Canyon,波尼大峡谷,600,291,319,286,299,246,207
+16-6b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,
 
 #moves
 id,slot,variant,move_en,move_zh,type,damage

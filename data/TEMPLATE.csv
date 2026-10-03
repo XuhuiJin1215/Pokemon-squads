@@ -1,10 +1,10 @@
 #pokemon
-id,form,form_en,form_zh,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
-13-6,,,,Garchomp,烈咬陆鲨,dragon,ground,#7B8FB8,Rough Skin,粗糙皮肤,Garchompite,烈咬陆鲨进化石,Route 18,18号道路,600,357,394,226,196,206,282
-13-6b,mega,Mega Evolution,超级进化,,,,,,Sand Force,沙之力,,,,,700,357,436,266,276,226,280
-20-4,,,,Gengar,耿鬼,ghost,poison,#8A6BB0,,,,,Obsidian Fieldlands,黑曜原野,500,323,251,219,394,249,349
-21-6,,,,Miraidon,密勒顿,electric,dragon,#A49CD8,Hadron Engine,强子引擎,Magnet,磁铁,Poco Path,小匙小径,670,342,185,236,405,266,369
-21-6b,tera,Terastal,太晶化,,,stellar,,,,,,,,,,,,,,,
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+13-6,,,,445,Garchomp,烈咬陆鲨,dragon,ground,#7B8FB8,Rough Skin,粗糙皮肤,Garchompite,烈咬陆鲨进化石,Route 18,18号道路,600,357,394,226,196,206,282
+13-6b,mega,Mega Evolution,超级进化,,,,,,,Sand Force,沙之力,,,,,700,357,436,266,276,226,280
+20-4,,,,94,Gengar,耿鬼,ghost,poison,#8A6BB0,,,,,Obsidian Fieldlands,黑曜原野,500,323,251,219,394,249,349
+21-6,,,,1008,Miraidon,密勒顿,electric,dragon,#A49CD8,Hadron Engine,强子引擎,Magnet,磁铁,Poco Path,小匙小径,670,342,185,236,405,266,369
+21-6b,tera,Terastal,太晶化,,,,stellar,,,,,,,,,,,,,,,
 
 #moves
 id,slot,variant,move_en,move_zh,type,damage

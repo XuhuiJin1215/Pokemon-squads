@@ -35,16 +35,21 @@ To preview locally, open a terminal in this folder and run `python -m http.serve
 
 21 Violet's player (Juliana / 小青) and hometown (Cabo Poco) are also my assumptions, since your Word file has no Violet table.
 
+## Squad summary
+
+Each game page opens with a summary worked out from the CSV, so there is nothing extra to fill in: total and average CP of the six base forms, the hardest hit (the highest `damage` among the normal moves, so Z-Moves and style variants are left out to keep it like-for-like), the team's Pokémon types, and the types of its damaging moves. A number like ×2 shows how many times a type appears.
+
 ## data/NN.csv
 
 Two blocks, each starting with a `#name` line:
 
 ### `#pokemon`, one row per Pokémon and per form
 
-`id, form, form_en, form_zh, name_en, name_zh, type1, type2, color, ability_en, ability_zh, item_en, item_zh, location_en, location_zh, bst, hp, atk, def, spa, spd, spe`
+`id, form, form_en, form_zh, dex, name_en, name_zh, type1, type2, color, ability_en, ability_zh, item_en, item_zh, location_en, location_zh, bst, hp, atk, def, spa, spd, spe`
 
 - **Base row** (`13-6`): fill everything. `color` is the card background. In the sample files it was taken from your PowerPoint slide backgrounds.
 - **Form row** (`13-6b`): fill only what changes. **Any blank cell inherits from the base row** (stats, ability, item, location, colour…). A form that lists only `type1` is treated as mono-type.
+- **`dex`** is the National Pokédex number (e.g. `445`), shown on the card as "No. 445". Fill it on the base row only: forms inherit it unless you give them their own.
 - **CP is not stored.** The site adds up the six stats.
 - Stats are your final level-100 stats. For Gen 1, enter Special in both `spa` and `spd`.
 - `type1`/`type2` use English keys: `normal fire water grass electric ice fighting poison ground flying psychic bug rock ghost dragon dark steel fairy` (plus `stellar` for Tera). The site translates them.
@@ -83,7 +88,7 @@ Every image is optional. Until one exists, the site shows a clean fallback (colo
 
 | Folder | File name | What |
 |---|---|---|
-| `games/` | `01.png` … `21.png` | box art (square crop looks best) |
+| `games/` | `01.png` … `21.png` | box art, 528 × 704 px (3:4 portrait). Shown uncropped on the home list and the game banner |
 | `players/` | `01.png` … | main character portrait |
 | `pokemon/` | `01-1.png`, `16-4b.png` … | artwork. A form without its own image falls back to the base image |
 | `places/` | `pallet-town.png` | hometown (game banner) and caught-at locations, named by **slug** of the English name. A caught-at place image becomes the backdrop behind that Pokémon's artwork |
