@@ -40,6 +40,7 @@ main{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
 .tile{background:var(--paper);border-radius:14px;padding:14px 16px;border:1px solid var(--line)}
 .tile b{display:block;font-size:28px;font-weight:700;line-height:1.1}
 .tile span{font-size:13px;color:var(--muted)}
+.gen-h:first-child{margin-top:4px}
 .gen-h{display:flex;align-items:baseline;gap:10px;margin:34px 0 12px}
 .gen-h h2{margin:0;font-size:15px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);font-weight:700}
 html[lang="zh-CN"] .gen-h h2{letter-spacing:2px}
@@ -80,14 +81,6 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .chip small{display:block;font-size:11px;opacity:.75;text-transform:uppercase;letter-spacing:.8px}
 html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
 .chip b{font-size:15px;font-weight:600}
-.sum{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 22px;display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:14px 34px;align-items:start}
-.sum .k{font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:3px}
-.sum .big{font-size:30px;line-height:1.05;font-weight:700;font-variant-numeric:tabular-nums}
-.sum .mid{font-size:13px;color:var(--muted);margin-top:4px}
-.sum .hit .name{font-size:17px;font-weight:600;line-height:1.2}
-.sum .hit .mid b{color:var(--ink);font-weight:600}
-.sum .tr{display:flex;flex-wrap:wrap;gap:6px}
-.sum .tr + .k{margin-top:12px}
 .pager{display:flex;justify-content:space-between;margin-top:26px;gap:12px}
 .pager a{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px;max-width:48%}
 .pager a small{display:block;color:var(--muted);font-size:12px}
@@ -115,7 +108,9 @@ html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
 .pc-body{padding:14px 18px 6px}
 .pc-title{display:flex;align-items:flex-start;gap:10px}
 .pc-name{flex:1;min-width:0}
-.pc-name h3{margin:0;font-size:22px;line-height:1.15;font-weight:700}
+.pc-name h3{margin:0;font-size:22px;line-height:1.15;font-weight:700;display:flex;align-items:center;gap:8px}
+.pc-name .ball{width:26px;height:26px;flex:none;display:grid}
+.pc-name .ball img,.pc-name .ball svg{width:26px;height:26px;object-fit:contain}
 .pc-name .sub{display:flex;flex-wrap:wrap;gap:0 10px;margin-top:1px;font-size:13px;color:var(--muted);font-weight:500}
 .pc-name .dex{font-variant-numeric:tabular-nums}
 .cp{display:flex;align-items:baseline;gap:5px;white-space:nowrap}
@@ -156,7 +151,6 @@ html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
 .pc-foot dd{margin:0;font-weight:500;display:flex;align-items:center;gap:6px;min-width:0}
 .pc-foot dd img{width:20px;height:20px;object-fit:contain;flex:none}
 @media (prefers-reduced-motion:reduce){.stage .art.swap{animation:none}.stats .bar i,.stage{transition:none}}
-@media (max-width:860px){.sum{grid-template-columns:auto 1fr}.sum .types-col{grid-column:1/-1}}
 @media (max-width:980px){.party{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.party{grid-template-columns:1fr}.stage{height:220px}}
 
@@ -179,7 +173,6 @@ html[lang="zh-CN"] .chip small{text-transform:none;letter-spacing:.5px}
   .squad .mon .ini{width:34px;height:34px;font-size:12px}
   .ginfo .t{font-size:16px}
   .ghero{grid-template-columns:1fr;padding:18px}
-  .sum{padding:14px 16px;gap:12px 24px}
   .ghero .box{width:105px;height:140px}
   .ghero h1{font-size:26px}
 }
@@ -202,9 +195,8 @@ const UI = {
       games:"Games", logged:"Squads logged", pokemon:"Pokémon", species:"Species",
       gen:n=>"Generation "+["","I","II","III","IV","V","VI","VII","VIII","IX","X"][n],
       soon:"Squad not added yet", back:"All games", player:"Player", hometown:"Hometown",
-      ability:"Ability", item:"Held item", location:"Caught at", bst:"Base stats", cp:"CP",
+      ability:"Ability", item:"Held item", location:"Caught at", ball:"Ball", bst:"Base stats", cp:"CP",
       prev:"Previous", next:"Next", base:"Base", from:"from",
-      totalCp:"Total CP", avgCp:"Average CP", hit:"Hardest hit", teamTypes:"Team types", moveTypes:"Move types",
       stats:{hp:"HP",atk:"Atk",def:"Def",spa:"Sp. Atk",spd:"Sp. Def",spe:"Speed"},
       loadErr:"Couldn't load the data files. If you opened index.html directly from your disk, run it through a local server or GitHub Pages instead (browsers block reading CSVs from file://).",
       variants:{agile:"Agile Style",strong:"Strong Style",plus:"Plus Move"}, tera:"Tera Type", notFound:"Game not found."},
@@ -212,9 +204,8 @@ const UI = {
       games:"游戏", logged:"已录入队伍", pokemon:"宝可梦", species:"种类",
       gen:n=>"第"+["","一","二","三","四","五","六","七","八","九","十"][n]+"世代",
       soon:"队伍尚未录入", back:"全部游戏", player:"主角", hometown:"故乡",
-      ability:"特性", item:"携带物品", location:"捕获地点", bst:"种族值", cp:"CP",
+      ability:"特性", item:"携带物品", location:"捕获地点", ball:"球种", bst:"种族值", cp:"CP",
       prev:"上一作", next:"下一作", base:"原形态", from:"原招式",
-      totalCp:"总 CP", avgCp:"平均 CP", hit:"最高伤害", teamTypes:"队伍属性", moveTypes:"招式属性",
       stats:{hp:"HP",atk:"攻击",def:"防御",spa:"特攻",spd:"特防",spe:"速度"},
       loadErr:"无法读取数据文件。如果是直接从本地双击打开 index.html，请改用本地服务器或 GitHub Pages（浏览器不允许从 file:// 读取 CSV）。",
       variants:{agile:"迅疾",strong:"刚猛",plus:"Plus 招式"}, tera:"太晶属性", notFound:"找不到这款游戏。"}
@@ -354,6 +345,8 @@ const ICON={
   ball:`<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff" stroke="#1E1F24" stroke-width="2"/><path d="M1 16a15 15 0 0 1 30 0z" fill="#E3350D" stroke="#1E1F24" stroke-width="2"/><circle cx="16" cy="16" r="4.5" fill="#fff" stroke="#1E1F24" stroke-width="2"/></svg>`,
   ballOutline:`<svg viewBox="0 0 32 32" fill="none" stroke="#1E1F24" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M2 16h9M21 16h9"/><circle cx="16" cy="16" r="4.5"/></svg>`
 };
+const BALL_COLOR={"poke-ball":"#E3350D","great-ball":"#2F6FD8","ultra-ball":"#2B2B2E","master-ball":"#8E4BB8","safari-ball":"#6B8E23","premier-ball":"#F2F2F2","luxury-ball":"#2B2B2E","nest-ball":"#8DBB3A","net-ball":"#2CA3A0","dive-ball":"#5BA7E8","dusk-ball":"#2F7D4A","quick-ball":"#3FA0E0","lure-ball":"#2AA7B8","timer-ball":"#E8E8E8","repeat-ball":"#E8A33A","heal-ball":"#F28CB8","level-ball":"#E8793A"};
+const ballSVG=k=>`<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff" stroke="#1E1F24" stroke-width="2"/><path d="M1 16a15 15 0 0 1 30 0z" fill="${BALL_COLOR[k]||"#E3350D"}" stroke="#1E1F24" stroke-width="2"/><circle cx="16" cy="16" r="4.5" fill="#fff" stroke="#1E1F24" stroke-width="2"/></svg>`;
 const icon=(name, fb)=>img([`icons/${name}.png`], fb);
 
 function typeIcon(t, tera){
@@ -395,16 +388,7 @@ function render(){
 window.addEventListener("hashchange",()=>{render(); window.scrollTo(0,0);});
 
 function renderHome(){
-  const logged=GAMES.filter(g=>SQUADS[g.no]);
-  const all=logged.flatMap(g=>SQUADS[g.no]);
-  const species=new Set(all.map(m=>m.base.name_en||m.base.name_zh));
-  let html=`<section class="hero"><h1>${T("title")}</h1><p>${T("sub")}</p>
-    <div class="tiles">
-      <div class="tile"><b>${GAMES.length}</b><span>${T("games")}</span></div>
-      <div class="tile"><b>${logged.length}</b><span>${T("logged")}</span></div>
-      <div class="tile"><b>${all.length}</b><span>${T("pokemon")}</span></div>
-      <div class="tile"><b>${species.size}</b><span>${T("species")}</span></div>
-    </div></section>`;
+  let html="";
   let gen=0;
   for(const g of GAMES){
     if(g.generation!==gen){ gen=g.generation; html+=`<div class="gen-h"><h2>${UI[LANG].gen(gen)}</h2></div>`; }
@@ -443,7 +427,6 @@ function renderGame(no){
     </div>
   </section>`;
   if(sq.length){
-    html+=summary(sq);
     html+=`<div class="party">${sq.map(m=>`<article class="pc" id="c-${m.id}"></article>`).join("")}</div>`;
   } else html+=`<div class="note">${T("soon")}</div>`;
   html+=`<div class="pager">${prev?`<a href="#/game/${prev.no}"><small>← ${T("prev")}</small>${esc(gameTitle(prev))}</a>`:"<span></span>"}${next?`<a href="#/game/${next.no}" style="text-align:right"><small>${T("next")} →</small>${esc(gameTitle(next))}</a>`:""}</div>`;
@@ -452,29 +435,17 @@ function renderGame(no){
   sq.forEach(m=>drawCard(g,m));
 }
 
-function summary(sq){
-  const vs=sq.map(m=>({m,v:view(m,-1,"")}));
-  const cps=vs.map(x=>x.v.cp).filter(x=>x!=null);
-  const total=cps.reduce((a,b)=>a+b,0), avg=cps.length?Math.round(total/cps.length):null;
-  let best=null;
-  for(const {m,v} of vs) for(const mv of v.moves){ const d=parseInt(mv.damage); if(!isNaN(d) && (!best||d>best.d)) best={d,mv,m}; }
-  const tally=(arr)=>{ const o={}; arr.filter(Boolean).forEach(t=>o[t]=(o[t]||0)+1); return Object.entries(o).sort((a,b)=>b[1]-a[1]||Object.keys(TYPES).indexOf(a[0])-Object.keys(TYPES).indexOf(b[0])); };
-  const mt=tally(vs.flatMap(x=>x.v.moves.filter(mv=>mv.damage).map(mv=>mv.type)));
-  const pt=tally(vs.flatMap(x=>[x.v.type1,x.v.type2]));
-  const chips=a=>a.map(([t,n])=>typeChip(t,false,n)).join("");
-  return `<section class="sum">
-    <div><div class="k">${T("totalCp")}</div><div class="big">${cps.length?total.toLocaleString("en-US"):"–"}</div>${avg!=null?`<div class="mid">${T("avgCp")} ${avg}</div>`:""}</div>
-    <div class="hit"><div class="k">${T("hit")}</div>${best?`<div class="big">${best.d}</div><div class="mid"><b>${esc(L(best.mv,"move"))}</b> · ${esc(L(best.m.base,"name"))}</div>`:`<div class="big">–</div>`}</div>
-    <div class="types-col"><div class="k">${T("teamTypes")}</div><div class="tr">${chips(pt)}</div><div class="k">${T("moveTypes")}</div><div class="tr">${chips(mt)}</div></div>
-  </section>`;
-}
-
 function deepen(hex){
   const m=/^#?([0-9a-f]{6})$/i.exec(hex||""); if(!m) return "#444";
   let n=parseInt(m[1],16), c=[n>>16,n>>8&255,n&255];
   const toHex=a=>"#"+a.map(v=>Math.round(v).toString(16).padStart(2,"0")).join("");
   for(let i=0;i<20 && lum(toHex(c))>.12;i++) c=c.map(v=>v*.86);
   return toHex(c);
+}
+function ballHTML(v){
+  if(!v.ball_en && !v.ball_zh) return "";
+  const k=slug(v.ball_en);
+  return `<span class="ball" title="${esc(L(v,"ball"))}">${img([`balls/${k}.png`], ballSVG(k))}</span>`;
 }
 function typeChip(t,tera,n){
   const c=(TYPES[t]||["","","#888"])[2];
@@ -518,6 +489,7 @@ function drawCard(g,mon,animate){
   const ls=slug(v.location_en);
   const rows=[];
   if(v.location_en||v.location_zh) rows.push([T("location"), esc(L(v,"location"))]);
+  if(v.ball_en||v.ball_zh) rows.push([T("ball"), esc(L(v,"ball"))]);
   if(v.item_en||v.item_zh) rows.push([T("item"), img([`items/${slug(v.item_en)}.png`],"")+esc(L(v,"item"))]);
   if(v.ability_en||v.ability_zh) rows.push([T("ability"), esc(L(v,"ability"))]);
   if(v.bst) rows.push([T("bst"), esc(v.bst)]);
@@ -531,7 +503,7 @@ function drawCard(g,mon,animate){
     </div>
     <div class="pc-body">
       <div class="pc-title">
-        <div class="pc-name"><h3>${esc(name)}</h3>${(v.dex||formLabel)?`<div class="sub">${v.dex?`<span class="dex">No. ${String(v.dex).padStart(3,"0")}</span>`:""}${formLabel?`<span class="form">${esc(formLabel)}</span>`:""}</div>`:""}</div>
+        <div class="pc-name"><h3>${ballHTML(v)}<span>${esc(name)}</span></h3>${(v.dex||formLabel)?`<div class="sub">${v.dex?`<span class="dex">No. ${String(v.dex).padStart(4,"0")}</span>`:""}${formLabel?`<span class="form">${esc(formLabel)}</span>`:""}</div>`:""}</div>
         ${v.cp!=null?`<div class="cp"><small>${T("cp")}</small><b>${v.cp}</b></div>`:""}
       </div>
       <div class="types">${types}</div>
