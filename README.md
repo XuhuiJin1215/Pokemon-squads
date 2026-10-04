@@ -64,6 +64,8 @@ Two blocks, each starting with a `#name` line:
 
 Clicking a button switches the card to that form, and clicking it again goes back to base.
 
+**Several forms of the same kind share one button, which cycles through them.** Give each its own row (`16-3b`, `16-3c`, `16-3d`…) with the same `form` value, e.g. nine `alt` rows for Furfrou's trims: click once for the first trim, again for the next, and after the last one the card returns to the base form. While cycling, the button shows a small counter (`2/9`) and the form's name appears under the Pokédex number. Different kinds (`alt`, `mega`…) keep separate buttons.
+
 ### `#moves`, one row per move
 
 `id, slot, variant, move_en, move_zh, type, damage`

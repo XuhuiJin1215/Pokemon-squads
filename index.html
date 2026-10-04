@@ -96,7 +96,9 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 @keyframes swap{from{opacity:0;transform:translateY(6px) scale(.96)}to{opacity:1;transform:none}}
 .forms{position:absolute;top:12px;right:12px;display:flex;gap:6px;z-index:2}
 .fbtn{width:38px;height:38px;border-radius:50%;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,.72);backdrop-filter:blur(4px);display:grid;place-items:center;font-size:10.5px;font-weight:800;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15);transition:transform .12s,background .15s}
+.fbtn{position:relative}
 .fbtn img{width:26px;height:26px;object-fit:contain}
+.fcnt{position:absolute;right:-5px;bottom:-5px;min-width:22px;height:16px;padding:0 4px;border-radius:8px;background:#fff;color:var(--ink);font-size:9.5px;font-weight:800;line-height:16px;text-align:center;box-shadow:0 0 0 1.5px var(--ink)}
 .fbtn:hover{transform:scale(1.06)}
 .fbtn.on{background:var(--ink);color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.85)}
 .fbtn:focus-visible,.vbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -479,7 +481,12 @@ function drawCard(g,mon,animate){
   el.style.setProperty("--pc",color);
   el.style.setProperty("--deep",deepen(color));
 
-  const forms=mon.forms.map((f,idx)=>`<button class="fbtn${st.form===idx?" on":""}" data-form="${idx}" title="${esc(L(f,"form"))}" aria-label="${esc(L(f,"form"))}" aria-pressed="${st.form===idx}">${img([`icons/form-${f.form||"alt"}.png`], esc(FORM_FALLBACK[f.form]||FORM_FALLBACK.alt))}</button>`).join("");
+  const kinds=[]; mon.forms.forEach((f,idx)=>{ const k=f.form||"alt"; let g2=kinds.find(x=>x.k===k); if(!g2) kinds.push(g2={k,idx:[]}); g2.idx.push(idx); });
+  const forms=kinds.map(g2=>{
+    const pos=g2.idx.indexOf(st.form), on=pos>=0, n=g2.idx.length;
+    const f=mon.forms[on?st.form:g2.idx[0]], lab=on?L(f,"form"):(n>1?L(f,"form")+" …":L(f,"form"));
+    return `<button class="fbtn${on?" on":""}" data-kind="${g2.k}" title="${esc(lab)}" aria-label="${esc(lab)}" aria-pressed="${on}">${img([`icons/form-${g2.k}.png`], esc(FORM_FALLBACK[g2.k]||FORM_FALLBACK.alt))}${n>1&&on?`<span class="fcnt">${pos+1}/${n}</span>`:""}</button>`;
+  }).join("");
   const variants=mon.variants.map(k=>`<button class="vbtn${st.variant===k?" on":""}" data-variant="${k}" aria-pressed="${st.variant===k}">${img([`icons/style-${k}.png`],"")}${esc(UI[LANG].variants[k]||k)}</button>`).join("");
 
   const isTera=v.form==="tera";
@@ -526,7 +533,13 @@ function drawCard(g,mon,animate){
     </div>
     <div class="pc-foot"><dl>${rows.map(r=>`<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join("")}</dl></div>`;
 
-  el.querySelectorAll("[data-form]").forEach(b=>b.onclick=()=>{ const k=+b.dataset.form; st.form = st.form===k?-1:k; drawCard(g,mon,true); });
+  /* a form button cycles through every form of its kind: base → form 1 → form 2 → … → base */
+  el.querySelectorAll("[data-kind]").forEach(b=>b.onclick=()=>{
+    const grp=mon.forms.map((f,i)=>(f.form||"alt")===b.dataset.kind?i:-1).filter(i=>i>=0);
+    const p=grp.indexOf(st.form);
+    st.form = p<0 ? grp[0] : (p+1<grp.length ? grp[p+1] : -1);
+    drawCard(g,mon,true);
+  });
   el.querySelectorAll("[data-variant]").forEach(b=>b.onclick=()=>{ const k=b.dataset.variant; st.variant = st.variant===k?"":k; drawCard(g,mon,false); });
 }
 
