@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+07-1,,,,254,Sceptile,蜥蜴王,grass,,#90C892,Overgrow,茂盛,Miracle Seed,奇迹种子,Poké Ball,精灵球,Route 101,101号道路,530,281,185,205,339,206,301
+07-2,,,,55,Golduck,哥达鸭,water,,#7FADD1,Cloud Nine,无关天气,Mystic Water,神秘水滴,Safari Ball,狩猎球,Safari Zone,狩猎地带,500,302,179,192,317,196,268
+07-3,,,,323,Camerupt,喷火驼,fire,ground,#E28E7F,Magma Armor,熔岩铠甲,Quick Claw,先制之爪,Repeat Ball,重复球,Fiery Path,热焰小径,460,281,286,175,295,185,143
+07-4,,,,334,Altaria,七夕青鸟,dragon,flying,#67CAEA,Natural Cure,自然回复,Sharp Beak,锐利鸟嘴,Luxury Ball,豪华球,Route 114,114号道路,490,291,239,216,239,246,197
+07-5,,,,306,Aggron,波士可多拉,steel,rock,#868484,Sturdy,结实,Hard Stone,硬石头,Level Ball,等级球,Granite Cave,石之洞窟,530,281,319,396,239,157,218
+07-6,,,,378,Regice,雷吉艾斯,ice,,#B4DFF0,Clear Body,恒净之躯,Never-Melt Ice,不融冰,Ultra Ball,高级球,Island Cave,小岛洞穴,580,301,122,236,328,437,199
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+07-1,1,,Leaf Blade,叶刃,grass,171
+07-1,2,,Thunder Punch,雷电拳,electric,111
+07-1,3,,Hidden Power,觉醒力量,dark,104
+07-1,4,,Cut,居合劈,normal,42
+07-2,1,,Waterfall,攀瀑,water,183
+07-2,2,,Dive,潜水,water,183
+07-2,3,,Hidden Power,觉醒力量,psychic,97
+07-2,4,,Flash,闪光,normal,
+07-3,1,,Eruption,喷火,fire,287
+07-3,2,,Dig,挖洞,ground,150
+07-3,3,,Hidden Power,觉醒力量,poison,88
+07-3,4,,Rock Smash,碎岩,fighting,27
+07-4,1,,Dragon Claw,龙爪,dragon,126
+07-4,2,,Fly,飞翔,flying,122
+07-4,3,,Secret Power,秘密之力,normal,74
+07-4,4,,Steel Wing,钢翼,steel,74
+07-5,1,,Iron Tail,铁尾,steel,208
+07-5,2,,Rock Slide,岩崩,rock,172
+07-5,3,,Strength,怪力,normal,111
+07-5,4,,Surf,冲浪,water,59
+07-6,1,,Ice Beam,冰冻光束,ice,224
+07-6,2,,Icy Wind,冰冻之风,ice,131
+07-6,3,,Zap Cannon,电磁炮,electric,171
+07-6,4,,Lock-On,锁定,normal,

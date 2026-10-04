@@ -1,0 +1,49 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+21-1,,,,908,Meowscarada,魔幻假面喵,grass,dark,#E6F1D8,Overgrow,茂盛,Miracle Seed,奇迹种子,,,Cabo Poco,小匙镇,530,294,350,176,178,176,345
+21-1b,tera,Terastal,太晶化,,,,grass,,,,,,,,,,,,,,,,,
+21-2,,,,981,Farigiraf,奇麒麟,normal,psychic,#F5AC78,Armor Tail,尾甲,Clear Amulet,清净坠饰,,,West Province (Area Two),西第2区,520,382,194,176,319,176,240
+21-2b,tera,Terastal,太晶化,,,,flying,,,,,,,,,,,,,,,,,
+21-3,,,,937,Ceruledge,苍炎刃鬼,fire,ghost,#847BB7,Flash Fire,引火,Metronome,节拍器,,,West Province (Area One),西第1区,525,292,383,196,140,236,269
+21-3b,tera,Terastal,太晶化,,,,fighting,,,,,,,,,,,,,,,,,
+21-4,,,,671,Florges,花洁夫人,fairy,,#E49587,Flower Veil,花幕,Shell Bell,贝壳之铃,,,South Province (Area Four),南第4区,552,298,149,172,323,344,273
+21-4b,tera,Terastal,太晶化,,,,water,,,,,,,,,,,,,,,,,
+21-5,,,,990,Iron Treads,铁辙迹,ground,steel,#9C9D9F,Quark Drive,夸克充能,Booster Energy,驱劲能量,,,Asado Desert,烘烘沙漠,570,322,355,276,162,176,311
+21-5b,tera,Terastal,太晶化,,,,steel,,,,,,,,,,,,,,,,,
+21-6,,,,1008,Miraidon,密勒顿,electric,dragon,#9E98CA,Hadron Engine,强子引擎,Magnet,磁铁,,,Poco Path,小匙小径,670,342,185,236,405,266,369
+21-6b,tera,Terastal,太晶化,,,,stellar,,,,,,,,,,,,,,,,,
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+21-1,1,,Flower Trick,千变万花,grass,289
+21-1,2,,Night Slash,暗袭要害,dark,161
+21-1,3,,Play Rough,嬉闹,fairy,137
+21-1,4,,Quick Attack,电光一闪,normal,62
+21-1b,1,,,,,385
+21-2,1,,Tera Blast,太晶爆发,normal,167
+21-2,2,,Twin Beam,双光束,psychic,167
+21-2,3,,Thunderbolt,十万伏特,electric,125
+21-2,4,,Nasty Plot,诡计,dark,
+21-3,1,,Bitter Blade,悔念剑,fire,225
+21-3,2,,Shadow Claw,暗影爪,ghost,175
+21-3,3,,Close Combat,近身战,fighting,199
+21-3,4,,Swords Dance,剑舞,normal,
+21-3b,3,,,,,298
+21-4,1,,Moonblast,月亮之力,fairy,200
+21-4,2,,Pollen Puff,花粉团,bug,127
+21-4,3,,Tera Blast,太晶爆发,normal,113
+21-4,4,,Grassy Terrain,青草场地,grass,
+21-4b,3,,,,,169
+21-5,1,,Earthquake,地震,ground,301
+21-5,2,,Iron Head,铁头,steel,241
+21-5,3,,Ice Spinner,冰旋,ice,161
+21-5,4,,Rapid Spin,高速旋转,normal,101
+21-5b,2,,,,,322
+21-6,1,,Electro Drift,闪电猛冲,electric,548
+21-6,2,,Draco Meteor,流星群,dragon,455
+21-6,3,,Power Gem,力量宝石,rock,187
+21-6,4,,Flash Cannon,加农光炮,steel,187
+21-6b,1,,,,,730
+21-6b,2,,,,,608
+21-6b,3,,,,,225
+21-6b,4,,,,,225

@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+10-1,,,,154,Meganium,大竺葵,grass,,#B8D68D,Overgrow,茂盛,Miracle Seed,奇迹种子,Poké Ball,精灵球,New Bark Town,若叶镇,525,302,180,236,291,236,259
+10-2,,,,164,Noctowl,猫头夜鹰,normal,flying,#B38A79,Insomnia,不眠,Twisted Spoon,弯曲的汤匙,Poké Ball,精灵球,Route 29,29号道路,442,341,218,136,251,205,177
+10-3,,,,212,Scizor,巨钳螳螂,bug,steel,#D77F7E,Technician,技术高手,Metal Coat,金属膜,Sport Ball,竞赛球,National Park,自然公园,500,282,359,236,131,196,251
+10-4,,,,31,Nidoqueen,尼多后,poison,ground,#8AAFC9,Poison Point,毒刺,Poison Barb,毒针,Moon Ball,月亮球,Route 35,35号道路,495,322,289,210,167,206,251
+10-5,,,,131,Lapras,拉普拉斯,water,ice,#82C8E9,Water Absorb,储水,Never-Melt Ice,不融冰,Dive Ball,潜水球,Union Cave,互连洞,535,401,206,196,295,204,219
+10-6,,,,244,Entei,炎帝,fire,,#9E5F35,Pressure,压迫感,Charcoal,木炭,Ultra Ball,高级球,Route 30,30号道路,580,371,329,206,279,186,237
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+10-1,1,,Magical Leaf,魔法叶,grass,138
+10-1,2,,Frenzy Plant,疯狂植物,grass,340
+10-1,3,,Ancient Power,原始之力,rock,77
+10-1,4,,Rock Smash,碎岩,fighting,33
+10-2,1,,Return,报恩,normal,146
+10-2,2,,Fly,飞翔,flying,129
+10-2,3,,Extrasensory,神通力,psychic,106
+10-2,4,,Hypnosis,催眠术,psychic,
+10-3,1,,X-Scissor,十字剪,bug,188
+10-3,2,,Bullet Punch,子弹拳,steel,172
+10-3,3,,Aerial Ace,燕返,flying,141
+10-3,4,,Cut,居合劈,normal,118
+10-4,1,,Poison Jab,毒击,poison,182
+10-4,2,,Dig,挖洞,ground,152
+10-4,3,,Rock Climb,攀岩,normal,113
+10-4,4,,Whirlpool,潮旋,water,13
+10-5,1,,Surf,冲浪,water,183
+10-5,2,,Waterfall,攀瀑,water,109
+10-5,3,,Ice Beam,冰冻光束,ice,220
+10-5,4,,Perish Song,终焉之歌,normal,
+10-6,1,,Flamethrower,喷射火焰,fire,208
+10-6,2,,Shadow Ball,暗影球,ghost,98
+10-6,3,,Iron Tail,铁尾,steel,143
+10-6,4,,Strength,怪力,normal,115

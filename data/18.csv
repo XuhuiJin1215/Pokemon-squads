@@ -1,0 +1,65 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+18-1,,,,818,Inteleon,千面避役,water,,#74B5C7,Sniper,狙击手,Scope Lens,焦点镜,Poké Ball,精灵球,Postwick Town,化朗镇,530,282,185,166,383,166,339
+18-1b,gigantamax,Gigantamax,超极巨化,,,,,,,,,,,,,,,530,564,185,166,383,166,339
+18-2,,,,760,Bewear,穿着熊,normal,fighting,#EDA5B3,Fluffy,毛茸茸,Leftovers,吃剩的东西,Poké Ball,精灵球,East Lake Axewell,牙牙湖东岸,500,382,383,196,131,156,219
+18-2b,dynamax,Dynamax,极巨化,,,,,,,,,,,,,,,500,764,383,196,131,156,219
+18-3,,,,12,Butterfree,巴大蝶,bug,flying,#8C869C,Compound Eyes,复眼,Silver Powder,银粉,Net Ball,捕网球,Dappled Grove,沐光森林,395,262,113,136,306,196,239
+18-3b,gigantamax,Gigantamax,超极巨化,,,,,,,,,,,,,,,395,524,113,136,306,196,239
+18-4,,,,836,Boltund,逐电犬,electric,,#EFCD47,Strong Jaw,强壮之颚,Magnet,磁铁,Quick Ball,先机球,Route 2,2号道路,490,280,306,156,194,156,341
+18-4b,dynamax,Dynamax,极巨化,,,,,,,,,,,,,,,490,560,306,156,194,156,341
+18-5,,,,468,Togekiss,波克基斯,fairy,flying,#E4F0ED,Serene Grace,天恩,Shell Bell,贝壳之铃,Heal Ball,治愈球,Rolling Fields,煦丽草原,545,312,122,226,372,266,259
+18-5b,dynamax,Dynamax,极巨化,,,,,,,,,,,,,,,545,624,122,226,372,266,259
+18-6,,,,248,Tyranitar,班基拉斯,rock,dark,#A5B88F,Sand Stream,扬沙,Muscle Band,力量头带,Great Ball,超级球,Watchtower Ruins,瞭望塔旧址,600,342,403,256,203,236,221
+18-6b,dynamax,Dynamax,极巨化,,,,,,,,,,,,,,,600,684,403,256,203,236,221
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+18-1,1,,Snipe Shot,狙击,water,450
+18-1,2,,Hydro Cannon,加农水炮,water,372
+18-1,3,,Ice Beam,冰冻光束,ice,150
+18-1,4,,Shadow Ball,暗影球,ghost,133
+18-1b,1,,G-Max Hydrosnipe,超极巨狙击神射,water,397
+18-1b,2,,G-Max Hydrosnipe,超极巨狙击神射,water,397
+18-1b,3,,Max Hailstorm,极巨寒冰,ice,215
+18-1b,4,,Max Phantasm,极巨幽魂,ghost,215
+18-2,1,,Strength,怪力,normal,200
+18-2,2,,Brick Break,劈瓦,fighting,188
+18-2,3,,Zen Headbutt,意念头锤,psychic,133
+18-2,4,,Iron Head,铁头,steel,133
+18-2b,1,,Max Strike,极巨攻击,normal,323
+18-2b,2,,Max Knuckle,极巨拳斗,fighting,225
+18-2b,3,,Max Mindstorm,极巨超能,psychic,215
+18-2b,4,,Max Steelspike,极巨钢铁,steel,215
+18-3,1,,Bug Buzz,虫鸣,bug,216
+18-3,2,,Hurricane,暴风,flying,219
+18-3,3,,Venoshock,毒液冲击,poison,87
+18-3,4,,Sleep Powder,催眠粉,grass,
+18-3b,1,,G-Max Befuddle,超极巨蝶影蛊惑,bug,310
+18-3b,2,,Max Airstream,极巨飞冲,flying,278
+18-3b,3,,Max Ooze,极巨酸毒,poison,113
+18-3b,4,,Max Guard,极巨防壁,normal,
+18-4,1,,Thunder Fang,雷电牙,electric,236
+18-4,2,,Nuzzle,蹭蹭脸颊,electric,51
+18-4,3,,Fire Fang,火焰牙,fire,131
+18-4,4,,Play Rough,嬉闹,fairy,120
+18-4b,1,,Max Lightning,极巨闪电,electric,287
+18-4b,2,,Max Lightning,极巨闪电,electric,216
+18-4b,3,,Max Flare,极巨火爆,fire,159
+18-4b,4,,Max Starfall,极巨妖精,fairy,172
+18-5,1,,Dazzling Gleam,魔法闪耀,fairy,194
+18-5,2,,Air Slash,空气之刃,flying,182
+18-5,3,,Magical Leaf,魔法叶,grass,98
+18-5,4,,Metronome,挥指,normal,
+18-5b,1,,Max Starfall,极巨妖精,fairy,314
+18-5b,2,,Max Airstream,极巨飞冲,flying,314
+18-5b,3,,Max Overgrowth,极巨草原,grass,177
+18-5b,4,,Max Guard,极巨防壁,normal,
+18-6,1,,Rock Slide,岩崩,rock,217
+18-6,2,,Crunch,咬碎,dark,231
+18-6,3,,Earthquake,地震,ground,192
+18-6,4,,Breaking Swipe,广域破坏,dragon,116
+18-6b,1,,Max Rockfall,极巨岩石,rock,374
+18-6b,2,,Max Darkness,极巨恶霸,dark,374
+18-6b,3,,Max Quake,极巨大地,ground,249
+18-6b,4,,Max Wyrmwind,极巨龙骑,dragon,211

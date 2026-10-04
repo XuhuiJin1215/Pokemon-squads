@@ -34,10 +34,9 @@ id,slot,variant,move_en,move_zh,type,damage
 16-4,2,,Thunder Wave,电磁波,electric,
 16-4,3,,Dragon Pulse,龙之波动,dragon,134
 16-4,4,,Power Gem,力量宝石,rock,126
-16-4b,1,,Discharge,放电,electric,245
-16-4b,2,,Thunder Wave,电磁波,electric,
-16-4b,3,,Dragon Pulse,龙之波动,dragon,260
-16-4b,4,,Power Gem,力量宝石,rock,163
+16-4b,1,,,,,245
+16-4b,3,,,,,260
+16-4b,4,,,,,163
 16-5,1,,Shadow Claw,暗影爪,ghost,141
 16-5,2,,Play Rough,嬉闹,fairy,180
 16-5,3,,Wood Hammer,木槌,grass,159

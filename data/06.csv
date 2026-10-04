@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+06-1,,,,3,Venusaur,妙蛙花,grass,poison,#5EB0AC,Overgrow,茂盛,Miracle Seed,奇迹种子,Poké Ball,精灵球,Pallet Town,真新镇,525,301,263,202,299,236,197
+06-2,,,,57,Primeape,火暴猴,fighting,,#BFB1A8,Vital Spirit,干劲,King's Rock,王者之证,Poké Ball,精灵球,Route 22,22号道路,455,271,339,157,140,176,289
+06-3,,,,101,Electrode,顽皮雷弹,electric,,#C7898C,Static,静电,Magnet,磁铁,Poké Ball,精灵球,Route 10,10号道路,480,324,122,176,284,196,317
+06-4,,,,105,Marowak,嘎啦嘎啦,ground,,#C7A071,Rock Head,坚硬脑袋,Thick Club,粗骨头,Level Ball,等级球,Pokémon Tower,宝可梦塔,425,261,284,256,122,197,189
+06-5,,,,121,Starmie,宝石海星,water,psychic,#B5B1D6,Natural Cure,自然回复,Twisted Spoon,弯曲的汤匙,Dive Ball,潜水球,Vermilion City,枯叶市,520,324,167,206,328,206,267
+06-6,,,,144,Articuno,急冻鸟,ice,flying,#73B3E0,Pressure,压迫感,Never-Melt Ice,不融冰,Ultra Ball,高级球,Seafoam Islands,双子岛,580,321,269,236,289,286,207
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+06-1,1,,Razor Leaf,飞叶快刀,grass,120
+06-1,2,,Frenzy Plant,疯狂植物,grass,320
+06-1,3,,Sludge Bomb,污泥炸弹,poison,155
+06-1,4,,Cut,居合劈,normal,58
+06-2,1,,Brick Break,劈瓦,fighting,166
+06-2,2,,Rock Smash,碎岩,fighting,47
+06-2,3,,Rock Slide,岩崩,rock,111
+06-2,4,,Aerial Ace,燕返,flying,89
+06-3,1,,Thunderbolt,十万伏特,electric,194
+06-3,2,,Thunder Wave,电磁波,electric,
+06-3,3,,Thief,小偷,dark,51
+06-3,4,,Flash,闪光,normal,
+06-4,1,,Bonemerang,骨头回力镖,ground,371
+06-4,2,,Iron Tail,铁尾,steel,247
+06-4,3,,Strength,怪力,normal,199
+06-4,4,,Double-Edge,舍身冲撞,normal,296
+06-5,1,,Surf,冲浪,water,203
+06-5,2,,Waterfall,攀瀑,water,172
+06-5,3,,Psychic,精神强念,psychic,212
+06-5,4,,Recover,自我再生,normal,
+06-6,1,,Ice Beam,冰冻光束,ice,197
+06-6,2,,Fly,飞翔,flying,124
+06-6,3,,Steel Wing,钢翼,steel,83
+06-6,4,,Hyper Beam,破坏光线,normal,175

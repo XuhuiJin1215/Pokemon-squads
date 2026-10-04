@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+09-1,,,,395,Empoleon,帝王拿波,water,steel,#517CB1,Torrent,激流,Mystic Water,神秘水滴,Poké Ball,精灵球,Route 201,201号道路,530,309,209,212,353,214,219
+09-2,,,,398,Staraptor,姆克鹰,normal,flying,#86736F,Intimidate,威吓,Amulet Coin,护符金币,Poké Ball,精灵球,Route 201,201号道路,485,343,372,176,122,136,268
+09-3,,,,428,Lopunny,长耳兔,normal,,#AF795F,Cute Charm,迷人之躯,Big Root,大根茎,Poké Ball,精灵球,Eterna Forest,百代森林,480,303,276,236,129,228,246
+09-4,,,,417,Pachirisu,帕奇利兹,electric,,#77CEDB,Run Away,逃跑,Soft Sand,柔软沙子,Quick Ball,先机球,Route 205,205号道路,405,261,189,176,189,216,227
+09-5,,,,461,Weavile,玛狃拉,dark,ice,#9A91A2,Pressure,压迫感,Razor Claw,锐利之爪,Dusk Ball,黑暗球,Route 216,216号道路,510,313,372,198,113,206,286
+09-6,,,,481,Mesprit,艾姆利多,psychic,,#DD8DAF,Levitate,飘浮,Mind Plate,神奇石板,Ultra Ball,高级球,Route 202,202号道路,580,302,221,246,339,246,259
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+09-1,1,,Surf,冲浪,water,262
+09-1,2,,Waterfall,攀瀑,water,133
+09-1,3,,Flash Cannon,加农光炮,steel,185
+09-1,4,,Rock Climb,攀岩,normal,83
+09-2,1,,Return,报恩,normal,247
+09-2,2,,Fly,飞翔,flying,218
+09-2,3,,Defog,清除浓雾,flying,
+09-2,4,,Close Combat,近身战,fighting,193
+09-3,1,,Cut,居合劈,normal,92
+09-3,2,,Fire Punch,火焰拳,fire,91
+09-3,3,,Drain Punch,吸取拳,fighting,73
+09-3,4,,Rock Smash,碎岩,fighting,49
+09-4,1,,Discharge,放电,electric,100
+09-4,2,,Super Fang,愤怒门牙,normal,150
+09-4,3,,U-turn,急速折返,bug,59
+09-4,4,,Dig,挖洞,ground,80
+09-5,1,,Night Slash,暗袭要害,dark,170
+09-5,2,,Ice Punch,冰冻拳,ice,182
+09-5,3,,Strength,怪力,normal,130
+09-5,4,,Agility,高速移动,psychic,
+09-6,1,,Psychic,精神强念,psychic,239
+09-6,2,,Shadow Ball,暗影球,ghost,118
+09-6,3,,Ice Beam,冰冻光束,ice,140
+09-6,4,,Swift,高速星星,normal,89

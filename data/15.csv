@@ -1,0 +1,48 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+15-1,,,,724,Decidueye,狙射树枭,grass,ghost,#DCA978,Overgrow,茂盛,Decidium Z,狙射树枭Z,Poké Ball,精灵球,Iki Town,利利小镇,530,298,344,186,212,236,239
+15-1b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,,,
+15-2,,,,700,Sylveon,仙子伊布,fairy,,#F4B0BB,Cute Charm,迷人之躯,Fairium Z,妖精Z,Poké Ball,精灵球,Route 5,5号道路,525,331,149,167,350,296,219
+15-2b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,,,
+15-3,,,,279,Pelipper,大嘴鸥,water,flying,#9DC4DC,Keen Eye,锐利目光,Waterium Z,水Z,Dive Ball,潜水球,Hau'oli Outskirts,好奥乐市郊,440,262,122,236,317,176,229
+15-3b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,,,
+15-4,,,,59,Arcanine,风速狗,fire,,#E4955A,Intimidate,威吓,Firium Z,火Z,Fast Ball,速度球,Route 2,2号道路,555,321,319,176,299,215,227
+15-4b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,,,
+15-5,,,,466,Electivire,电击魔兽,electric,,#EFD28A,Motor Drive,电气引擎,Electrium Z,电Z,Quick Ball,先机球,Route 12,12号道路,540,291,379,202,203,206,258
+15-5b,z,Z-Move,Z招式,,,,,,,,,,,,,,,,,,,,,
+15-6,,,,791,Solgaleo,索尔迦雷欧,psychic,steel,#FAF8F0,Full Metal Body,金属防护,King's Rock,王者之证,Master Ball,大师球,Altar of the Sunne,日轮祭坛,680,416,410,250,235,214,293
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+15-1,1,,Leaf Blade,叶刃,grass,202
+15-1,2,,Spirit Shackle,缝影,ghost,180
+15-1,3,,Brave Bird,勇鸟猛攻,flying,179
+15-1,4,,Double Team,影子分身,normal,
+15-1b,2,,Sinister Arrow Raid,遮天蔽日暗影箭,ghost,401
+15-2,1,,Moonblast,月亮之力,fairy,217
+15-2,2,,Misty Terrain,薄雾场地,fairy,
+15-2,3,,Shadow Ball,暗影球,ghost,122
+15-2,4,,Attract,迷人,normal,
+15-2b,1,,Twinkle Tackle,可爱星星飞天撞,fairy,397
+15-2b,2,,Z-Misty Terrain,Z 薄雾场地,fairy,
+15-3,1,,Hydro Pump,水炮,water,227
+15-3,2,,Hurricane,暴风,flying,227
+15-3,3,,Roost,羽栖,flying,
+15-3,4,,Blizzard,暴风雪,ice,151
+15-3b,1,,Hydro Vortex,超级水流大漩涡,water,380
+15-4,1,,Flamethrower,喷射火焰,fire,176
+15-4,2,,Will-O-Wisp,磷火,fire,
+15-4,3,,Bulldoze,重踏,ground,84
+15-4,4,,Extreme Speed,神速,normal,111
+15-4b,1,,Inferno Overdrive,超强极限爆焰弹,fire,339
+15-4b,2,,Z-Will-O-Wisp,Z 磷火,fire,
+15-5,1,,Thunder Punch,雷电拳,electric,186
+15-5,2,,Thunder Wave,电磁波,electric,
+15-5,3,,Rock Slide,岩崩,rock,124
+15-5,4,,Brick Break,劈瓦,fighting,124
+15-5b,1,,Gigavolt Havoc,终极伏特狂雷闪,electric,344
+15-5b,2,,Z-Thunder Wave,Z 电磁波,electric,
+15-6,1,,Zen Headbutt,意念头锤,psychic,214
+15-6,2,,Cosmic Power,宇宙力量,psychic,
+15-6,3,,Sunsteel Strike,流星闪冲,steel,267
+15-6,4,,Giga Impact,终极冲击,normal,266

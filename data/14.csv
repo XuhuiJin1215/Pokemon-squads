@@ -1,0 +1,55 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+14-1,,,,257,Blaziken,火焰鸡,fire,fighting,#E08F80,Blaze,猛火,Blazikenite,火焰鸡进化石,Poké Ball,精灵球,Route 101,101号道路,530,301,372,177,230,176,259
+14-1b,mega,Mega Evolution,超级进化,,,,,,,Speed Boost,加速,,,,,,,630,301,460,197,266,196,299
+14-2,,,,272,Ludicolo,乐天河童,water,grass,#BFDB8E,Rain Dish,雨盘,Miracle Seed,奇迹种子,Dive Ball,潜水球,Route 102,102号道路,480,301,239,176,279,236,177
+14-3,,,,462,Magnezone,自爆磁怪,electric,steel,#BBCDD9,Sturdy,结实,Rocky Helmet,凸凸头盔,Quick Ball,先机球,Route 110,110号道路,535,282,158,266,394,216,219
+14-4,,,,282,Gardevoir,沙奈朵,psychic,fairy,#A0D19A,Trace,复制,Gardevoirite,沙奈朵进化石,Heal Ball,治愈球,Route 102,102号道路,518,309,149,166,383,266,228
+14-4b,mega,Mega Evolution,超级进化,,,,,,,Pixilate,妖精皮肤,,,,,,,618,309,185,166,471,306,268
+14-5,,,,359,Absol,阿勃梭鲁,dark,,#98AACB,Super Luck,超幸运,Absolite,阿勃梭鲁进化石,Dusk Ball,黑暗球,Route 120,120号道路,465,272,394,156,167,156,249
+14-5b,mega,Mega Evolution,超级进化,,,,,,,Magic Bounce,魔法镜,,,,,,,565,272,438,156,239,156,329
+14-6,,,,380,Latias,拉帝亚斯,dragon,psychic,#E57D78,Levitate,飘浮,Latiasite,拉帝亚斯进化石,Poké Ball,精灵球,Southern Island,南方孤岛,600,333,176,216,350,296,288
+14-6b,mega,Mega Evolution,超级进化,,,,,,,,,,,,,,,700,333,212,276,416,336,288
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+14-1,1,,Blaze Kick,火焰踢,fire,206
+14-1,2,,Sky Uppercut,冲天拳,fighting,206
+14-1,3,,Strength,怪力,normal,130
+14-1,4,,Cut,居合劈,normal,82
+14-1b,1,,,,,254
+14-1b,2,,,,,254
+14-1b,3,,,,,160
+14-1b,4,,,,,101
+14-2,1,,Waterfall,攀瀑,water,126
+14-2,2,,Dive,潜水,water,126
+14-2,3,,Giga Drain,终极吸取,grass,165
+14-2,4,,Nature Power,自然之力,normal,98
+14-3,1,,Thunderbolt,十万伏特,electric,231
+14-3,2,,Thunder Wave,电磁波,electric,
+14-3,3,,Flash Cannon,加农光炮,steel,206
+14-3,4,,Tri Attack,三重攻击,normal,137
+14-4,1,,Psychic,精神强念,psychic,225
+14-4,2,,Moonblast,月亮之力,fairy,237
+14-4,3,,Hyper Beam,破坏光线,normal,248
+14-4,4,,Shadow Ball,暗影球,ghost,133
+14-4b,1,,,,,276
+14-4b,2,,,,,291
+14-4b,3,,,,,549
+14-4b,4,,,,,163
+14-5,1,,Night Slash,暗袭要害,dark,270
+14-5,2,,X-Scissor,十字剪,bug,137
+14-5,3,,Stone Edge,尖石攻击,rock,256
+14-5,4,,Rock Smash,碎岩,fighting,70
+14-5b,1,,,,,200
+14-5b,2,,,,,152
+14-5b,3,,,,,190
+14-5b,4,,,,,77
+14-6,1,,Draco Meteor,流星群,dragon,296
+14-6,2,,Mist Ball,薄雾球,psychic,161
+14-6,3,,Ice Beam,冰冻光束,ice,137
+14-6,4,,Surf,冲浪,water,137
+14-6b,1,,,,,351
+14-6b,2,,,,,190
+14-6b,3,,,,,162
+14-6b,4,,,,,162

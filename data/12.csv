@@ -1,0 +1,45 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+12-1,,,,503,Samurott,大剑鬼,water,,#406FAA,Torrent,激流,Mystic Water,神秘水滴,Poké Ball,精灵球,Aspertia City,桧扇市,528,331,286,206,302,176,203
+12-2,,,,531,Audino,差不多娃娃,normal,,#F7A5B0,Regenerator,再生力,Lax Incense,悠闲熏香,Poké Ball,精灵球,Floccesy Ranch,算木牧场,445,361,140,208,240,208,186
+12-3,,,,471,Glaceon,冰伊布,ice,,#B4E0DD,Snow Cloak,雪隐,Sitrus Berry,文柚果,Poké Ball,精灵球,Castelia City,飞云市,525,303,140,256,394,226,198
+12-4,,,,571,Zoroark,索罗亚克,dark,,#5C5866,Illusion,幻觉,Dark Gem,恶之宝石,Poké Ball,精灵球,Driftveil City,帆巴市,510,323,245,140,338,155,269
+12-5,,,,555,Darmanitan,达摩狒狒,fire,,#AC463A,Zen Mode,达摩模式,Metronome,节拍器,Repeat Ball,重复球,Desert Resort,荒野名胜区,480,350,340,145,158,159,226
+12-5b,alt,Zen Mode,达摩模式,,,,fire,psychic,,,,,,,,,,540,350,142,245,378,269,146
+12-6,,,,645,Landorus,土地云,ground,flying,#F19752,Sheer Force,强行,Shell Bell,贝壳之铃,Dream Ball,梦境球,Virbank City,立涌市,600,319,341,216,321,196,255
+12-6b,alt,Therian Forme,灵兽形态,,,,,,,Intimidate,威吓,,,,,,,600,319,381,216,301,196,235
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+12-1,1,,Waterfall,攀瀑,water,180
+12-1,2,,Dive,潜水,water,180
+12-1,3,,Iron Tail,铁尾,steel,125
+12-1,4,,Hyper Beam,破坏光线,normal,196
+12-2,1,,Hyper Voice,巨声,normal,142
+12-2,2,,Toxic,剧毒,poison,
+12-2,3,,Surf,冲浪,water,100
+12-2,4,,Thunderbolt,十万伏特,electric,100
+12-3,1,,Ice Beam,冰冻光束,ice,244
+12-3,2,,Hail,冰雹,ice,
+12-3,3,,Shadow Ball,暗影球,ghost,137
+12-3,4,,Signal Beam,信号光束,bug,129
+12-4,1,,Night Daze,暗黑爆破,dark,282
+12-4,2,,Focus Blast,真气弹,fighting,176
+12-4,3,,Grass Knot,打草结,grass,103
+12-4,4,,Cut,居合劈,normal,55
+12-5,1,,Fire Punch,火焰拳,fire,167
+12-5,2,,Psychic,精神强念,psychic,63
+12-5,3,,Stone Edge,尖石攻击,rock,148
+12-5,4,,Strength,怪力,normal,119
+12-5b,1,,,,,71
+12-5b,2,,,,,222
+12-5b,3,,,,,63
+12-5b,4,,,,,51
+12-6,1,,Earth Power,大地之力,ground,245
+12-6,2,,Fly,飞翔,flying,200
+12-6,3,,Extrasensory,神通力,psychic,146
+12-6,4,,Outrage,逆鳞,dragon,177
+12-6b,1,,,,,177
+12-6b,2,,,,,223
+12-6b,3,,,,,105
+12-6b,4,,,,,198

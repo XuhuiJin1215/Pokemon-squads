@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+11-1,,,,497,Serperior,君主蛇,grass,,#91CBA5,Overgrow,茂盛,Miracle Seed,奇迹种子,Poké Ball,精灵球,Nuvema Town,鹿子镇,528,291,249,226,273,203,263
+11-2,,,,521,Unfezant,高傲雉鸡,normal,flying,#98999D,Super Luck,超幸运,Scope Lens,焦点镜,Poké Ball,精灵球,Route 3,3号道路,478,301,339,196,149,178,254
+11-3,,,,565,Carracosta,肋骨海龟,water,rock,#82ADD7,Sturdy,结实,Expert Belt,达人带,Poké Ball,精灵球,Nacrene City,七宝市,495,289,346,302,181,167,163
+11-4,,,,553,Krookodile,流氓鳄,ground,dark,#B6787F,Intimidate,威吓,Black Glasses,黑色眼镜,Level Ball,等级球,Desert Resort,荒野名胜区,509,331,366,176,149,177,283
+11-5,,,,612,Haxorus,双斧战龙,dragon,,#B7AD54,Mold Breaker,破格,Rocky Helmet,凸凸头盔,Luxury Ball,豪华球,Mistralton Cave,吹寄洞穴,540,294,432,216,140,176,293
+11-6,,,,638,Cobalion,勾帕路翁,steel,fighting,#279EB5,Justified,正义之心,Bright Powder,光粉,Ultra Ball,高级球,Guidance Chamber,引导之间,580,323,306,294,194,181,315
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+11-1,1,,Giga Drain,终极吸取,grass,162
+11-1,2,,Leaf Blade,叶刃,grass,176
+11-1,3,,Aerial Ace,燕返,flying,66
+11-1,4,,Cut,居合劈,normal,55
+11-2,1,,Quick Attack,电光一闪,normal,90
+11-2,2,,Fly,飞翔,flying,199
+11-2,3,,Roost,羽栖,flying,
+11-2,4,,U-turn,急速折返,bug,104
+11-3,1,,Waterfall,攀瀑,water,181
+11-3,2,,Dive,潜水,water,181
+11-3,3,,Rock Slide,岩崩,rock,170
+11-3,4,,Rock Smash,碎岩,fighting,61
+11-4,1,,Dig,挖洞,ground,191
+11-4,2,,Crunch,咬碎,dark,229
+11-4,3,,Strength,怪力,normal,127
+11-4,4,,Swagger,虚张声势,normal,
+11-5,1,,Dragon Claw,龙爪,dragon,225
+11-5,2,,X-Scissor,十字剪,bug,150
+11-5,3,,Poison Jab,毒击,poison,150
+11-5,4,,Surf,冲浪,water,59
+11-6,1,,Iron Head,铁头,steel,160
+11-6,2,,Sacred Sword,圣剑,fighting,180
+11-6,3,,Retaliate,报仇,normal,94
+11-6,4,,Swords Dance,剑舞,normal,

@@ -1,0 +1,35 @@
+#pokemon
+id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
+04-1,,,,157,Typhlosion,火暴兽,fire,,#FFEA9E,,,Charcoal,木炭,Poké Ball,精灵球,New Bark Town,若叶镇,534,359,266,254,316,268,298
+04-2,,,,241,Miltank,大奶罐,normal,,#F9BAC0,,,Bright Powder,光粉,Poké Ball,精灵球,Route 38,38号道路,490,393,258,308,178,238,298
+04-3,,,,169,Crobat,叉字蝠,poison,flying,#9F8BB4,,,Sharp Beak,锐利鸟嘴,Poké Ball,精灵球,Dark Cave,黑暗穴,535,373,278,258,238,258,358
+04-4,,,,197,Umbreon,月亮伊布,dark,,#59697C,,,Black Glasses,黑色眼镜,Poké Ball,精灵球,Goldenrod City,满金市,525,393,228,318,218,358,228
+04-5,,,,230,Kingdra,刺龙王,water,dragon,#61B3D7,,,Dragon Fang,龙之牙,Poké Ball,精灵球,Whirl Islands,漩涡岛,540,353,288,288,288,288,268
+04-6,,,,251,Celebi,时拉比,psychic,grass,#DBEBC6,,,Miracle Seed,奇迹种子,Poké Ball,精灵球,Ilex Forest,栎树林,600,403,298,298,298,298,298
+
+#moves
+id,slot,variant,move_en,move_zh,type,damage
+04-1,1,,Flamethrower,喷射火焰,fire,216
+04-1,2,,Thunder Punch,雷电拳,electric,104
+04-1,3,,Cut,居合劈,normal,59
+04-1,4,,Rock Smash,碎岩,fighting,25
+04-2,1,,Strength,怪力,normal,136
+04-2,2,,Milk Drink,喝牛奶,normal,
+04-2,3,,Surf,冲浪,water,74
+04-2,4,,Earthquake,地震,ground,113
+04-3,1,,Toxic,剧毒,poison,
+04-3,2,,Fly,飞翔,flying,141
+04-3,3,,Steel Wing,钢翼,steel,85
+04-3,4,,Confuse Ray,奇异之光,ghost,
+04-4,1,,Faint Attack,出奇一击,dark,96
+04-4,2,,Shadow Ball,暗影球,ghost,80
+04-4,3,,Headbutt,头锤,normal,70
+04-4,4,,Flash,闪光,normal,
+04-5,1,,Waterfall,攀瀑,water,151
+04-5,2,,Whirlpool,潮旋,water,68
+04-5,3,,Dragon Breath,龙息,dragon,125
+04-5,4,,Ice Beam,冰冻光束,ice,119
+04-6,1,,Psychic,精神强念,psychic,175
+04-6,2,,Giga Drain,终极吸取,grass,130
+04-6,3,,Ancient Power,原始之力,rock,79
+04-6,4,,Swift,高速星星,normal,79
