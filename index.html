@@ -117,6 +117,7 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .tchip{display:inline-flex;align-items:center;justify-content:flex-start;gap:3px;width:104px;height:26px;padding:0 10px 0 0;border-radius:999px;color:#fff;font-size:12.5px;font-weight:600;overflow:hidden;white-space:nowrap}
 .tchip .ti{width:26px;height:26px;flex:none;display:grid;place-items:center}
 .tchip .ti img{width:26px;height:26px;object-fit:contain;display:block}
+.tchip .tn{flex:1;min-width:0;text-align:center}
 .tchip .cnt{font-weight:700;opacity:.85}
 /* Tera chip: the faceted star sits on the pill's left end like a gem badge */
 .tchip.tera{position:relative;overflow:visible;padding-left:28px;margin-left:5px;width:104px;
@@ -464,7 +465,7 @@ function ballHTML(v){
 function typeChip(t,tera,n){
   const c=(TYPES[t]||["","","#888"])[2];
   const p= tera ? [`types/tera-${t}.png`,`types/${t}.png`] : [`types/${t}.png`];
-  return `<span class="tchip${tera?" tera":""}${t==="stellar"?" stellar":""}" style="background:${c};--tc:${c}" title="${tera?esc(T("tera"))+" · ":""}${esc(typeName(t))}"><span class="ti">${img(p,"")}</span>${esc(typeName(t))}${n>1?`<span class="cnt">×${n}</span>`:""}</span>`;
+  return `<span class="tchip${tera?" tera":""}${t==="stellar"?" stellar":""}" style="background:${c};--tc:${c}" title="${tera?esc(T("tera"))+" · ":""}${esc(typeName(t))}"><span class="ti">${img(p,"")}</span><span class="tn">${esc(typeName(t))}${n>1?`<span class="cnt">×${n}</span>`:""}</span></span>`;
 }
 const STAT_ORDER=["hp","atk","def","spa","spd","spe"];
 
