@@ -24,7 +24,7 @@ button{font-family:inherit}
 /* ---------- header ---------- */
 .top{position:sticky;top:0;z-index:20;background:rgba(243,241,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
-.brand{white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.2px}
+.brand{font-family:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.2px}
 .brand .ball{width:26px;height:26px}
 .top .sp{flex:1}
 .lang{display:flex;background:#E6E3DC;border-radius:999px;padding:3px}
@@ -114,12 +114,12 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .cp b{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--deep)}
 .types{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
 /* type chip: the icon's own square is the chip colour, so only its white symbol shows */
-.tchip{display:inline-flex;align-items:center;gap:3px;height:26px;padding:0 12px 0 0;border-radius:999px;color:#fff;font-size:12.5px;font-weight:600;overflow:hidden;white-space:nowrap}
+.tchip{display:inline-flex;align-items:center;justify-content:center;gap:3px;width:104px;height:26px;padding:0 10px 0 0;border-radius:999px;color:#fff;font-size:12.5px;font-weight:600;overflow:hidden;white-space:nowrap}
 .tchip .ti{width:26px;height:26px;flex:none;display:grid;place-items:center}
 .tchip .ti img{width:26px;height:26px;object-fit:contain;display:block}
 .tchip .cnt{font-weight:700;opacity:.85}
 /* Tera chip: the faceted star sits on the pill's left end like a gem badge */
-.tchip.tera{position:relative;overflow:visible;padding-left:30px;margin-left:5px;
+.tchip.tera{position:relative;overflow:visible;padding-left:28px;margin-left:5px;width:104px;
   background:color-mix(in srgb,var(--tc) 14%,#fff)!important;color:color-mix(in srgb,var(--tc) 72%,#000);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--tc) 45%,#fff)}
 .tchip.tera .ti{position:absolute;left:-7px;top:50%;width:34px;height:34px;transform:translateY(-50%);filter:drop-shadow(0 1px 2px rgba(0,0,0,.28))}
 .tchip.tera .ti img{width:34px;height:34px}
