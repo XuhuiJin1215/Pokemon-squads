@@ -1,4 +1,4 @@
-#pokemon
+#pokemon,,,,,,,,,,,,,,,,,,,,,,,,
 id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
 02-1,,,,25,Pikachu,皮卡丘,electric,,#FADE83,,,,,Poké Ball,精灵球,Pallet Town,真新镇,310,273,208,158,198,198,278
 02-2,,,,1,Bulbasaur,妙蛙种子,grass,poison,#8ECFB3,,,,,Poké Ball,精灵球,Cerulean City,华蓝市,318,293,196,196,228,228,188
@@ -6,30 +6,30 @@ id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability
 02-4,,,,7,Squirtle,杰尼龟,water,,#83C9D9,,,,,Poké Ball,精灵球,Vermilion City,枯叶市,300,291,194,228,198,198,184
 02-5,,,,18,Pidgeot,大比鸟,normal,flying,#C9A26B,,,,,Poké Ball,精灵球,Route 1,1号道路,469,369,258,248,238,238,280
 02-6,,,,143,Snorlax,卡比兽,normal,,#6199AD,,,,,Poké Ball,精灵球,Route 12,12号道路,495,523,318,228,228,228,158
-
-#moves
-id,slot,variant,move_en,move_zh,type,damage
-02-1,1,,Thunderbolt,十万伏特,electric,124
-02-1,2,,Thunder,打雷,electric,156
-02-1,3,,Quick Attack,电光一闪,normal,38
-02-1,4,,Flash,闪光,normal,
-02-2,1,,Razor Leaf,飞叶快刀,grass,125
-02-2,2,,Mega Drain,超级吸取,grass,62
-02-2,3,,Toxic,剧毒,poison,
-02-2,4,,Double-Edge,舍身冲撞,normal,86
-02-3,1,,Flamethrower,喷射火焰,fire,167
-02-3,2,,Fly,飞翔,flying,123
-02-3,3,,Seismic Toss,地球上投,fighting,100
-02-3,4,,Cut,居合劈,normal,59
-02-4,1,,Surf,冲浪,water,124
-02-4,2,,Ice Beam,冰冻光束,ice,83
-02-4,3,,Skull Bash,火箭头锤,normal,85
-02-4,4,,Dig,挖洞,ground,85
-02-5,1,,Swift,高速星星,normal,103
-02-5,2,,Fly,飞翔,flying,119
-02-5,3,,Sky Attack,神鸟猛击,flying,235
-02-5,4,,Agility,高速移动,psychic,
-02-6,1,,Strength,怪力,normal,167
-02-6,2,,Psychic,精神强念,psychic,90
-02-6,3,,Earthquake,地震,ground,138
-02-6,4,,Rock Slide,岩崩,rock,104
+,,,,,,,,,,,,,,,,,,,,,,,,
+#moves,,,,,,,,,,,,,,,,,,,,,,,,
+id,slot,variant,move_en,move_zh,type,damage,,,,,,,,,,,,,,,,,,
+02-1,1,,Thunderbolt,十万伏特,electric,124,,,,,,,,,,,,,,,,,,
+02-1,2,,Thunder,打雷,electric,156,,,,,,,,,,,,,,,,,,
+02-1,3,,Quick Attack,电光一闪,normal,38,,,,,,,,,,,,,,,,,,
+02-1,4,,Flash,闪光,normal,,,,,,,,,,,,,,,,,,,
+02-2,1,,Razor Leaf,飞叶快刀,grass,125,,,,,,,,,,,,,,,,,,
+02-2,2,,Mega Drain,超级吸取,grass,62,,,,,,,,,,,,,,,,,,
+02-2,3,,Toxic,剧毒,poison,,,,,,,,,,,,,,,,,,,
+02-2,4,,Double-Edge,舍身冲撞,normal,86,,,,,,,,,,,,,,,,,,
+02-3,1,,Flamethrower,喷射火焰,fire,167,,,,,,,,,,,,,,,,,,
+02-3,2,,Fly,飞翔,flying,123,,,,,,,,,,,,,,,,,,
+02-3,3,,Seismic Toss,地球上投,fighting,100,,,,,,,,,,,,,,,,,,
+02-3,4,,Cut,居合劈,normal,59,,,,,,,,,,,,,,,,,,
+02-4,1,,Surf,冲浪,water,124,,,,,,,,,,,,,,,,,,
+02-4,2,,Ice Beam,冰冻光束,ice,83,,,,,,,,,,,,,,,,,,
+02-4,3,,Skull Bash,火箭头锤,normal,85,,,,,,,,,,,,,,,,,,
+02-4,4,,Dig,挖洞,ground,85,,,,,,,,,,,,,,,,,,
+02-5,1,,Quick Attack,电光一闪,normal,103,,,,,,,,,,,,,,,,,,
+02-5,2,,Fly,飞翔,flying,119,,,,,,,,,,,,,,,,,,
+02-5,3,,Sky Attack,神鸟猛击,flying,235,,,,,,,,,,,,,,,,,,
+02-5,4,,Agility,高速移动,psychic,,,,,,,,,,,,,,,,,,,
+02-6,1,,Strength,怪力,normal,167,,,,,,,,,,,,,,,,,,
+02-6,2,,Psychic,精神强念,psychic,90,,,,,,,,,,,,,,,,,,
+02-6,3,,Earthquake,地震,ground,138,,,,,,,,,,,,,,,,,,
+02-6,4,,Rock Slide,岩崩,rock,104,,,,,,,,,,,,,,,,,,
