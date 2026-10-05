@@ -1,22 +1,23 @@
 no,title_en,title_zh,generation,year,platform,region_en,region_zh,player_en,player_zh,hometown_en,hometown_zh,color
-01,Pokémon Blue,宝可梦 蓝,1,1996,Game Boy,Kanto,关都,Red,赤红,Pallet Town,真新镇,#3B5FC4
-02,Pokémon Yellow,宝可梦 皮卡丘,1,1998,Game Boy,Kanto,关都,Red,赤红,Pallet Town,真新镇,#E8B923
-03,Pokémon Gold,宝可梦 金,2,1999,Game Boy Color,Johto,城都,Ethan,阿响,New Bark Town,若叶镇,#C29A35
-04,Pokémon Crystal,宝可梦 水晶,2,2000,Game Boy Color,Johto,城都,Kris,克丽丝,New Bark Town,若叶镇,#4FB3CF
-05,Pokémon Ruby,宝可梦 红宝石,3,2002,Game Boy Advance,Hoenn,丰缘,May,小遥,Littleroot Town,未白镇,#C3283A
-06,Pokémon LeafGreen,宝可梦 叶绿,3,2004,Game Boy Advance,Kanto,关都,Leaf,叶子,Pallet Town,真新镇,#6FAE45
-07,Pokémon Emerald,宝可梦 绿宝石,3,2004,Game Boy Advance,Hoenn,丰缘,May,小遥,Littleroot Town,未白镇,#1E9468
-08,Pokémon Pearl,宝可梦 珍珠,4,2006,Nintendo DS,Sinnoh,神奥,Dawn,小光,Twinleaf Town,双叶镇,#C98BAE
-09,Pokémon Platinum,宝可梦 白金,4,2008,Nintendo DS,Sinnoh,神奥,Dawn,小光,Twinleaf Town,双叶镇,#7D7F8C
-10,Pokémon HeartGold,宝可梦 心金,4,2009,Nintendo DS,Johto,城都,Lyra,琴音,New Bark Town,若叶镇,#C8962E
-11,Pokémon Black,宝可梦 黑,5,2010,Nintendo DS,Unova,合众,Hilda,斗子,Nuvema Town,鹿子镇,#2E2E33
-12,Pokémon Black 2,宝可梦 黑2,5,2012,Nintendo DS,Unova,合众,Rosa,鸣依,Aspertia City,桧扇市,#3C4A5C
-13,Pokémon Y,宝可梦 Y,6,2013,Nintendo 3DS,Kalos,卡洛斯,Serena,莎莉娜,Vaniville Town,朝露镇,#C23B57
-14,Pokémon Alpha Sapphire,宝可梦 始源蓝宝石,6,2014,Nintendo 3DS,Hoenn,丰缘,May,小遥,Littleroot Town,未白镇,#2552A3
-15,Pokémon Sun,宝可梦 太阳,7,2016,Nintendo 3DS,Alola,阿罗拉,Selene,美月,Hau'oli Outskirts,好奥乐市郊,#EE8A26
-16,Pokémon Ultra Sun,宝可梦 究极之日,7,2017,Nintendo 3DS,Alola,阿罗拉,Selene,美月,Hau'oli Outskirts,好奥乐市郊,#E2621B
-17,"Pokémon: Let's Go, Eevee!",宝可梦 Let's Go! 伊布,7,2018,Nintendo Switch,Kanto,关都,Elaine,小菘,Pallet Town,真新镇,#B37945
-18,Pokémon Shield,宝可梦 盾,8,2019,Nintendo Switch,Galar,伽勒尔,Gloria,小优,Postwick,断离镇,#B8235A
-19,Pokémon Brilliant Diamond,宝可梦 晶灿钻石,8,2021,Nintendo Switch,Sinnoh,神奥,Dawn,小光,Twinleaf Town,双叶镇,#3B7BD0
-20,Pokémon Legends: Arceus,宝可梦传说 阿尔宙斯,8,2022,Nintendo Switch,Hisui,洗翠,Akari,小照,Jubilife Village,祝庆村,#B8954F
-21,Pokémon Violet,宝可梦 紫,9,2022,Nintendo Switch,Paldea,帕底亚,Juliana,小青,Cabo Poco,小匙岬,#7447B8
+01,Pokémon Blue,宝可梦 蓝,1,1996,Game Boy,Kanto,关都,Red,赤红,Pallet Town,真新镇,#2E50D8
+02,Pokémon Yellow,宝可梦 皮卡丘,1,1998,Game Boy,Kanto,关都,Red,赤红,Pallet Town,真新镇,#FFD732
+03,Pokémon Gold,宝可梦 金,2,1999,Game Boy Color,Johto,城都,Ethan,阿响,New Bark Town,若叶镇,#DAA51F
+04,Pokémon Crystal,宝可梦 水晶,2,2000,Game Boy Color,Johto,城都,Kris,克丽丝,New Bark Town,若叶镇,#4FD9FF
+05,Pokémon Ruby,宝可梦 红宝石,3,2002,Game Boy Advance,Hoenn,丰缘,May,小遥,Littleroot Town,未白镇,#CD2236
+06,Pokémon LeafGreen,宝可梦 叶绿,3,2004,Game Boy Advance,Kanto,关都,Leaf,叶子,Pallet Town,真新镇,#9FDC00
+07,Pokémon Emerald,宝可梦 绿宝石,3,2004,Game Boy Advance,Hoenn,丰缘,May,小遥,Littleroot Town,未白镇,#009652
+08,Pokémon Pearl,宝可梦 珍珠,4,2006,Nintendo DS,Sinnoh,神奥,Dawn,小光,Twinleaf Town,双叶镇,#DD7CB1
+09,Pokémon Platinum,宝可梦 白金,4,2008,Nintendo DS,Sinnoh,神奥,Dawn,小光,Twinleaf Town,双叶镇,#A0A08D
+10,Pokémon HeartGold,宝可梦 心金,4,2009,Nintendo DS,Johto,城都,Lyra,琴音,New Bark Town,若叶镇,#E8B502
+11,Pokémon Black,宝可梦 黑,5,2010,Nintendo DS,Unova,合众,Hilda,斗子,Nuvema Town,鹿子镇,#444444
+12,Pokémon Black 2,宝可梦 黑2,5,2012,Nintendo DS,Unova,合众,Rosa,鸣依,Aspertia City,桧扇市,#303E51
+13,Pokémon Y,宝可梦 Y,6,2013,Nintendo 3DS,Kalos,卡洛斯,Serena,莎莉娜,Vaniville Town,朝香镇,#EA1B3E
+14,Pokémon Alpha Sapphire,宝可梦 始源蓝宝石,6,2014,Nintendo 3DS,Hoenn,丰缘,May,小遥,Littleroot Town,未白镇,#26649C
+15,Pokémon Sun,宝可梦 太阳,7,2016,Nintendo 3DS,Alola,阿罗拉,Selene,美月,Hau'oli Outskirts,好奥乐市郊,#F1912B
+16,Pokémon Ultra Sun,宝可梦 究极之日,7,2017,Nintendo 3DS,Alola,阿罗拉,Selene,美月,Hau'oli Outskirts,好奥乐市郊,#E95B2B
+17,"Pokémon: Let's Go, Eevee!",宝可梦 Let's Go! 伊布,7,2018,Nintendo Switch,Kanto,关都,Elaine,步美,Pallet Town,真新镇,#D4924B
+18,Pokémon Shield,宝可梦 盾,8,2019,Nintendo Switch,Galar,伽勒尔,Gloria,小优,Postwick,化朗镇,#BF014F
+19,Pokémon Brilliant Diamond,宝可梦 晶灿钻石,8,2021,Nintendo Switch,Sinnoh,神奥,Dawn,小光,Twinleaf Town,双叶镇,#44BAE5
+20,Pokémon Legends: Arceus,宝可梦传说 阿尔宙斯,8,2022,Nintendo Switch,Hisui,洗翠,Akari,小照,Jubilife Village,祝庆村,#36597B
+21,Pokémon Violet,宝可梦 紫,9,2022,Nintendo Switch,Paldea,帕底亚,Juliana,小青,Cabo Poco,小匙镇,#8334B7
+22,Pokémon Legends: Z-A,宝可梦传说 Z-A,9,2025,Nintendo Switch 2,Kalos,卡洛斯,Harmony,生彩,Lumiose City,密阿雷市,#31CA56
