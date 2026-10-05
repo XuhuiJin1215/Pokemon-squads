@@ -321,8 +321,9 @@ function view(mon, formIdx, variant){
     let mv=baseMoves.find(x=>+x.slot===s) || null, state="";
     if(variant){ const v=mon.moves.find(x=>+x.slot===s && x.variant===variant); if(v){ mv=Object.assign({},mv||{},nonEmpty(v)); state="hl"; } }
     if(f){
-      const fm=(f._moves||[]).find(x=>+x.slot===s && (!x.variant||x.variant===variant));
-      if(fm){ const from=mv; mv=Object.assign({},mv||{},nonEmpty(fm)); if(f.form==="z"){ state="hl"; mv._from=from; } }
+      const fms=(f._moves||[]).filter(x=>+x.slot===s);
+      const fm=fms.find(x=>!x.variant), fv=variant?fms.find(x=>x.variant===variant):null;   // form row first, then the chosen style on top of it
+      if(fm||fv){ const from=mv; mv=Object.assign({},mv||{},fm?nonEmpty(fm):{},fv?nonEmpty(fv):{}); if(f.form==="z"){ state="hl"; mv._from=from; } }
       else if(f.form==="z") state="dim";
     }
     return mv?{...mv,_state:state}:null;
