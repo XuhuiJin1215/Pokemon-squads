@@ -14,24 +14,64 @@ id,slot,variant,move_en,move_zh,type,damage
 20-1,2,,Triple Arrows,三连箭,fighting,101
 20-1,3,,Brave Bird,勇鸟猛攻,flying,162
 20-1,4,,Roost,羽栖,flying,
+20-1,1,agile,,,,132
+20-1,1,strong,,,,319
+20-1,2,agile,,,,81
+20-1,2,strong,,,,121
+20-1,3,agile,,,,130
+20-1,3,strong,,,,194
 20-2,1,,Wild Charge,疯狂伏特,electric,172
 20-2,2,,Thunder Wave,电磁波,electric,
 20-2,3,,Crunch,咬碎,dark,129
 20-2,4,,Iron Tail,铁尾,steel,162
+20-2,1,agile,,,,131
+20-2,1,strong,,,,212
+20-2,3,agile,,,,97
+20-2,3,strong,,,,162
+20-2,4,agile,,,,129
+20-2,4,strong,,,,194
 20-3,1,,Psychic,精神强念,psychic,166
 20-3,2,,Calm Mind,冥想,psychic,
 20-3,3,,Dazzling Gleam,魔法闪耀,fairy,124
 20-3,4,,Hyper Beam,破坏光线,normal,199
+20-3,1,agile,,,,124
+20-3,1,strong,,,,207
+20-3,3,agile,,,,100
+20-3,3,strong,,,,149
+20-3,4,agile,,,,166
+20-3,4,strong,,,,249
 20-4,1,,Shadow Ball,暗影球,ghost,164
 20-4,2,,Sludge Bomb,污泥炸弹,poison,164
 20-4,3,,Poison Gas,毒瓦斯,poison,
 20-4,4,,Icy Wind,冰冻之风,ice,98
+20-4,1,agile,,,,123
+20-4,1,strong,,,,205
+20-4,2,agile,,,,123
+20-4,2,strong,,,,205
+20-4,4,agile,,,,74
+20-4,4,strong,,,,123
 20-5,1,,Headlong Rush,突飞猛扑,ground,207
 20-5,2,,Slash,劈开,normal,145
 20-5,3,,Stone Edge,尖石攻击,rock,166
 20-5,4,,Bulk Up,健美,fighting,
+20-5,1,agile,,,,166
+20-5,1,strong,,,,249
+20-5,2,agile,,,,114
+20-5,2,strong,,,,264
+20-5,3,agile,,,,133
+20-5,3,strong,,,,373
 20-6,1,,Hydro Pump,水炮,water,213
 20-6,2,,Spacial Rend,亚空裂斩,dragon,191
 20-6,3,,Earth Power,大地之力,ground,136
 20-6,4,,Flamethrower,喷射火焰,fire,136
+20-6,1,agile,,,,170
+20-6,1,strong,,,,255
+20-6,2,agile,,,,159
+20-6,2,strong,,,,234
+20-6,3,agile,,,,102
+20-6,3,strong,,,,170
+20-6,4,agile,,,,102
+20-6,4,strong,,,,170
 20-6b,2,,,,,255
+20-6b,2,agile,,,,207
+20-6b,2,strong,,,,319
