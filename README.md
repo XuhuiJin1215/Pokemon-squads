@@ -48,6 +48,7 @@ Two blocks, each starting with a `#name` line:
 - **`dex`** is the National Pokédex number (e.g. `445`), shown on the card padded to 4 digits ("No. 0445"). Type it as `445` or `0445`; Excel drops leading zeros, and the site restores them. Fill it on the base row only: forms inherit it unless you give them their own.
 - **`ball_en` / `ball_zh`** is the Poké Ball the Pokémon was caught in, e.g. `Ultra Ball` / `高级球`. Its icon sits before the name on the card and the name is listed in the details. The image file is `balls/` + slug of `ball_en` (see below). Fill it on the base row only.
 - **CP is not stored.** The site adds up the six stats.
+- **Stat bars use one fixed scale: 500 for every game.** A stat above 500 (e.g. Dynamax HP) fills the bar and then draws the excess as pale diagonal stripes over the bar, starting from the left. The number beside the bar is always the exact value.
 - Stats are your final level-100 stats. For Gen 1, enter Special in both `spa` and `spd`.
 - `type1`/`type2` use English keys: `normal fire water grass electric ice fighting poison ground flying psychic bug rock ghost dragon dark steel fairy` (plus `stellar` for Tera). The site translates them.
 - `form` picks the toggle button:

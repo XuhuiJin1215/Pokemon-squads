@@ -130,8 +130,9 @@ a.grow:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .tchip.tera.stellar{background:linear-gradient(100deg,#e3edfb,#e2f5ee 30%,#fbf3dc 55%,#fbe4e4 78%,#eee4fb)!important;color:#4b3f8f}
 .stats{display:grid;grid-template-columns:auto 1fr auto;gap:5px 10px;align-items:center;font-size:12.5px}
 .stats .k{color:var(--muted)}
-.stats .bar{height:7px;border-radius:4px;background:#EDEBE6;overflow:hidden}
+.stats .bar{height:7px;border-radius:4px;background:#EDEBE6;overflow:hidden;position:relative}
 .stats .bar i{display:block;height:100%;border-radius:4px;background:var(--deep);transition:width .3s}
+.stats .bar i.lap{position:absolute;left:0;top:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.75) 0 2px,transparent 2px 5px)}
 .stats .v{font-weight:600;font-variant-numeric:tabular-nums;text-align:right;min-width:28px}
 .variants{display:flex;gap:6px;margin:14px 0 -4px}
 .vbtn{border:1px solid var(--line);background:var(--paper);border-radius:999px;height:30px;padding:0 12px;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer}
@@ -448,8 +449,7 @@ function renderGame(no){
   } else html+=`<div class="note">${T("soon")}</div>`;
   html+=`<div class="pager">${prev?`<a href="#/game/${prev.no}"><small>← ${T("prev")}</small>${esc(gameTitle(prev))}</a>`:"<span></span>"}${next?`<a href="#/game/${next.no}" style="text-align:right"><small>${T("next")} →</small>${esc(gameTitle(next))}</a>`:""}</div>`;
   app.innerHTML=html;
-  g._max=Math.max(500,...sq.flatMap(m=>[m.base,...m.forms]).flatMap(r=>STATS.map(k=>parseInt(r[k])||0)));
-  sq.forEach(m=>drawCard(g,m));
+    sq.forEach(m=>drawCard(g,m));
 }
 
 function deepen(hex){
@@ -492,10 +492,10 @@ function drawCard(g,mon,animate){
   const isTera=v.form==="tera";
   const types = isTera ? typeChip(v.type1,true) : [v.type1,v.type2].filter(Boolean).map(t=>typeChip(t)).join("");
 
-  const max=g._max||500;
+  const max=500;
   const stats=STAT_ORDER.map(k=>{
     const x=v.stats[k];
-    return `<span class="k">${UI[LANG].stats[k]}</span><span class="bar"><i style="width:${x==null?0:Math.min(100,x/max*100)}%"></i></span><span class="v">${x??"–"}</span>`;
+    return `<span class="k">${UI[LANG].stats[k]}</span><span class="bar"><i style="width:${x==null?0:Math.min(100,x/max*100)}%"></i>${x>max?`<i class="lap" style="width:${Math.min(100,(x-max)/max*100)}%"></i>`:""}</span><span class="v">${x??"–"}</span>`;
   }).join("");
 
   const n=v.moves.length;
