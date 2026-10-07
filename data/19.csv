@@ -1,36 +1,36 @@
-#pokemon
+#pokemon,,,,,,,,,,,,,,,,,,,,,,,,
 id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
 19-1,,,,392,Infernape,烈焰猴,fire,fighting,#D48969,Blaze,猛火,Charcoal,木炭,Poké Ball,精灵球,Lake Verity,心齐湖,534,293,307,178,268,178,296
 19-2,,,,441,Chatot,聒噪鸟,normal,flying,#808185,Keen Eye,锐利目光,Metronome,节拍器,Poké Ball,精灵球,Route 222,222号道路,411,294,149,126,311,120,281
-19-3,,,,421,Cherrim,樱花儿,grass,,#F4B2B4,Flower Gift,花之礼,Heat Rock,炽热岩石,Nest Ball,巢穴球,Grassland Cave,草原空洞,450,282,140,176,300,192,269
+19-3,,Overcast Form,阴天形态,421,Cherrim,樱花儿,grass,,#F4B2B4,Flower Gift,花之礼,Heat Rock,炽热岩石,Nest Ball,巢穴球,Grassland Cave,草原空洞,450,282,140,176,300,192,269
 19-3b,alt,Sunshine Form,晴天形态,,,,,,,,,,,,,,,,,,,,,
-19-4,,,,413,Wormadam (Trash Cloak),结草贵妇（垃圾蓑衣）,bug,steel,#DA8E91,Anticipation,危险预知,Quick Claw,先制之爪,Net Ball,捕网球,Floaroma Meadow,花苑花田,424,262,156,226,237,226,188
+19-4,,Trash Cloak,垃圾蓑衣,413,Wormadam,结草贵妇,bug,steel,#DA8E91,Anticipation,危险预知,Quick Claw,先制之爪,Net Ball,捕网球,Floaroma Meadow,花苑花田,424,262,156,226,237,226,188
 19-5,,,,358,Chimecho,风铃铃,psychic,,#EEF6F9,Levitate,飘浮,Shell Bell,贝壳之铃,Love Ball,甜蜜球,Route 211,211号道路,455,292,94,196,289,216,251
 19-6,,,,490,Manaphy,玛纳霏,water,,#73C6D4,Hydration,湿润之躯,Splash Plate,水滴石板,Poké Ball,精灵球,Route 205,205号道路,600,342,212,236,328,236,299
-
-#moves
-id,slot,variant,move_en,move_zh,type,damage
-19-1,1,,Fire Blast,大字爆炎,fire,231
-19-1,2,,Power-Up Punch,增强拳,fighting,82
-19-1,3,,Close Combat,近身战,fighting,240
-19-1,4,,Stone Edge,尖石攻击,rock,134
-19-2,1,,Hyper Voice,巨声,normal,183
-19-2,2,,Sing,唱歌,normal,
-19-2,3,,Chatter,喋喋不休,flying,133
-19-2,4,,Nasty Plot,诡计,dark,
-19-3,1,,Magical Leaf,魔法叶,grass,119
-19-3,2,,Solar Beam,日光束,grass,234
-19-3,3,,Dazzling Gleam,魔法闪耀,fairy,105
-19-3,4,,Sunny Day,大晴天,fire,
-19-4,1,,Bug Buzz,虫鸣,bug,140
-19-4,2,,Quiver Dance,蝶舞,bug,
-19-4,3,,Flash Cannon,加农光炮,steel,125
-19-4,4,,Hyper Beam,破坏光线,normal,154
-19-5,1,,Psychic,精神强念,psychic,170
-19-5,2,,Shadow Ball,暗影球,ghost,101
-19-5,3,,Charge Beam,充电光束,electric,64
-19-5,4,,Heal Bell,治愈铃声,normal,
-19-6,1,,Surf,冲浪,water,231
-19-6,2,,Whirlpool,潮旋,water,92
-19-6,3,,Blizzard,暴风雪,ice,157
-19-6,4,,Tail Glow,萤火,bug,
+,,,,,,,,,,,,,,,,,,,,,,,,
+#moves,,,,,,,,,,,,,,,,,,,,,,,,
+id,slot,variant,move_en,move_zh,type,damage,,,,,,,,,,,,,,,,,,
+19-1,1,,Fire Blast,大字爆炎,fire,231,,,,,,,,,,,,,,,,,,
+19-1,2,,Power-Up Punch,增强拳,fighting,82,,,,,,,,,,,,,,,,,,
+19-1,3,,Close Combat,近身战,fighting,240,,,,,,,,,,,,,,,,,,
+19-1,4,,Stone Edge,尖石攻击,rock,134,,,,,,,,,,,,,,,,,,
+19-2,1,,Hyper Voice,巨声,normal,183,,,,,,,,,,,,,,,,,,
+19-2,2,,Sing,唱歌,normal,,,,,,,,,,,,,,,,,,,
+19-2,3,,Chatter,喋喋不休,flying,133,,,,,,,,,,,,,,,,,,
+19-2,4,,Nasty Plot,诡计,dark,,,,,,,,,,,,,,,,,,,
+19-3,1,,Magical Leaf,魔法叶,grass,119,,,,,,,,,,,,,,,,,,
+19-3,2,,Solar Beam,日光束,grass,234,,,,,,,,,,,,,,,,,,
+19-3,3,,Dazzling Gleam,魔法闪耀,fairy,105,,,,,,,,,,,,,,,,,,
+19-3,4,,Sunny Day,大晴天,fire,,,,,,,,,,,,,,,,,,,
+19-4,1,,Bug Buzz,虫鸣,bug,140,,,,,,,,,,,,,,,,,,
+19-4,2,,Quiver Dance,蝶舞,bug,,,,,,,,,,,,,,,,,,,
+19-4,3,,Flash Cannon,加农光炮,steel,125,,,,,,,,,,,,,,,,,,
+19-4,4,,Hyper Beam,破坏光线,normal,154,,,,,,,,,,,,,,,,,,
+19-5,1,,Psychic,精神强念,psychic,170,,,,,,,,,,,,,,,,,,
+19-5,2,,Shadow Ball,暗影球,ghost,101,,,,,,,,,,,,,,,,,,
+19-5,3,,Charge Beam,充电光束,electric,64,,,,,,,,,,,,,,,,,,
+19-5,4,,Heal Bell,治愈铃声,normal,,,,,,,,,,,,,,,,,,,
+19-6,1,,Surf,冲浪,water,231,,,,,,,,,,,,,,,,,,
+19-6,2,,Whirlpool,潮旋,water,92,,,,,,,,,,,,,,,,,,
+19-6,3,,Blizzard,暴风雪,ice,157,,,,,,,,,,,,,,,,,,
+19-6,4,,Tail Glow,萤火,bug,,,,,,,,,,,,,,,,,,,
