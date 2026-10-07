@@ -24,6 +24,7 @@ id,slot,variant,move_en,move_zh,type,damage
 21-2,2,,Twin Beam,双光束,psychic,167
 21-2,3,,Thunderbolt,十万伏特,electric,125
 21-2,4,,Nasty Plot,诡计,dark,
+21-2b,1,,,,flying,
 21-3,1,,Bitter Blade,悔念剑,fire,225
 21-3,2,,Shadow Claw,暗影爪,ghost,175
 21-3,3,,Close Combat,近身战,fighting,199
@@ -33,7 +34,7 @@ id,slot,variant,move_en,move_zh,type,damage
 21-4,2,,Pollen Puff,花粉团,bug,127
 21-4,3,,Tera Blast,太晶爆发,normal,113
 21-4,4,,Grassy Terrain,青草场地,grass,
-21-4b,3,,,,,169
+21-4b,3,,,,water,169
 21-5,1,,Earthquake,地震,ground,301
 21-5,2,,Iron Head,铁头,steel,241
 21-5,3,,Ice Spinner,冰旋,ice,161
