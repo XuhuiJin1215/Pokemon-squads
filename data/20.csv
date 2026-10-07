@@ -1,77 +1,77 @@
-#pokemon
+#pokemon,,,,,,,,,,,,,,,,,,,,,,,,
 id,form,form_en,form_zh,dex,name_en,name_zh,type1,type2,color,ability_en,ability_zh,item_en,item_zh,ball_en,ball_zh,location_en,location_zh,bst,hp,atk,def,spa,spd,spe
-20-1,,,,724,Hisuian Decidueye,狙射树枭（洗翠的样子）,grass,fighting,#B28E51,,,,,Poké Ball (Hisuian),洗翠精灵球,Jubilife Village,祝庆村,530,410,392,289,308,327,237
-20-2,,,,405,Luxray,伦琴猫,electric,,#89C2D5,,,,,Poké Ball (Hisuian),洗翠精灵球,Obsidian Fieldlands,黑曜原野,523,389,390,287,327,271,278
-20-3,,,,196,Espeon,太阳伊布,psychic,,#D9BAD2,,,,,Poké Ball (Hisuian),洗翠精灵球,Horseshoe Plains,蹄铁草原,525,351,238,237,440,327,365
-20-4,,,,94,Gengar,耿鬼,ghost,poison,#A49DBC,,,,,Poké Ball (Hisuian),洗翠精灵球,Golden Lowlands,金色平野,500,337,238,237,414,277,387
-20-5,,,,901,Ursaluna,月月熊,ground,normal,#948781,,,,,Heavy Ball (Hisuian),洗翠沉重球,Ursa's Ring,熊的比武场,550,514,438,352,188,289,221
-20-6,,,,484,Palkia,帕路奇亚,water,dragon,#D7C6DC,,,,,Ultra Ball (Hisuian),洗翠高级球,Temple of Sinnoh,神奥神殿,600,415,366,340,492,390,340
+20-1,,Hisuian Form,洗翠的样子,724,Decidueye,狙射树枭,grass,fighting,#B28E51,,,,,Poké Ball (Hisuian),精灵球（洗翠）,Jubilife Village,祝庆村,530,410,392,289,308,327,237
+20-2,,,,405,Luxray,伦琴猫,electric,,#89C2D5,,,,,Poké Ball (Hisuian),精灵球（洗翠）,Obsidian Fieldlands,黑曜原野,523,389,390,287,327,271,278
+20-3,,,,196,Espeon,太阳伊布,psychic,,#D9BAD2,,,,,Poké Ball (Hisuian),精灵球（洗翠）,Horseshoe Plains,蹄铁草原,525,351,238,237,440,327,365
+20-4,,,,94,Gengar,耿鬼,ghost,poison,#A49DBC,,,,,Poké Ball (Hisuian),精灵球（洗翠）,Golden Lowlands,金色平野,500,337,238,237,414,277,387
+20-5,,,,901,Ursaluna,月月熊,ground,normal,#948781,,,,,Heavy Ball (Hisuian),沉重球（洗翠）,Ursa's Ring,熊的比武场,550,514,438,352,188,289,221
+20-6,,,,484,Palkia,帕路奇亚,water,dragon,#D7C6DC,,,,,Ultra Ball (Hisuian),高级球（洗翠）,Temple of Sinnoh,神奥神殿,600,415,366,340,492,390,340
 20-6b,alt,Origin Forme,起源形态,,,,,,,,,,,,,,,600,415,320,340,492,390,390
-
-#moves
-id,slot,variant,move_en,move_zh,type,damage
-20-1,1,,Leaf Blade,叶刃,grass,172
-20-1,2,,Triple Arrows,三连箭,fighting,101
-20-1,3,,Brave Bird,勇鸟猛攻,flying,162
-20-1,4,,Roost,羽栖,flying,
-20-1,1,agile,,,,132
-20-1,1,strong,,,,319
-20-1,2,agile,,,,81
-20-1,2,strong,,,,121
-20-1,3,agile,,,,130
-20-1,3,strong,,,,194
-20-2,1,,Wild Charge,疯狂伏特,electric,172
-20-2,2,,Thunder Wave,电磁波,electric,
-20-2,3,,Crunch,咬碎,dark,129
-20-2,4,,Iron Tail,铁尾,steel,162
-20-2,1,agile,,,,131
-20-2,1,strong,,,,212
-20-2,3,agile,,,,97
-20-2,3,strong,,,,162
-20-2,4,agile,,,,129
-20-2,4,strong,,,,194
-20-3,1,,Psychic,精神强念,psychic,166
-20-3,2,,Calm Mind,冥想,psychic,
-20-3,3,,Dazzling Gleam,魔法闪耀,fairy,124
-20-3,4,,Hyper Beam,破坏光线,normal,199
-20-3,1,agile,,,,124
-20-3,1,strong,,,,207
-20-3,3,agile,,,,100
-20-3,3,strong,,,,149
-20-3,4,agile,,,,166
-20-3,4,strong,,,,249
-20-4,1,,Shadow Ball,暗影球,ghost,164
-20-4,2,,Sludge Bomb,污泥炸弹,poison,164
-20-4,3,,Poison Gas,毒瓦斯,poison,
-20-4,4,,Icy Wind,冰冻之风,ice,98
-20-4,1,agile,,,,123
-20-4,1,strong,,,,205
-20-4,2,agile,,,,123
-20-4,2,strong,,,,205
-20-4,4,agile,,,,74
-20-4,4,strong,,,,123
-20-5,1,,Headlong Rush,突飞猛扑,ground,207
-20-5,2,,Slash,劈开,normal,145
-20-5,3,,Stone Edge,尖石攻击,rock,166
-20-5,4,,Bulk Up,健美,fighting,
-20-5,1,agile,,,,166
-20-5,1,strong,,,,249
-20-5,2,agile,,,,114
-20-5,2,strong,,,,264
-20-5,3,agile,,,,133
-20-5,3,strong,,,,373
-20-6,1,,Hydro Pump,水炮,water,213
-20-6,2,,Spacial Rend,亚空裂斩,dragon,191
-20-6,3,,Earth Power,大地之力,ground,136
-20-6,4,,Flamethrower,喷射火焰,fire,136
-20-6,1,agile,,,,170
-20-6,1,strong,,,,255
-20-6,2,agile,,,,159
-20-6,2,strong,,,,234
-20-6,3,agile,,,,102
-20-6,3,strong,,,,170
-20-6,4,agile,,,,102
-20-6,4,strong,,,,170
-20-6b,2,,,,,255
-20-6b,2,agile,,,,207
-20-6b,2,strong,,,,319
+,,,,,,,,,,,,,,,,,,,,,,,,
+#moves,,,,,,,,,,,,,,,,,,,,,,,,
+id,slot,variant,move_en,move_zh,type,damage,,,,,,,,,,,,,,,,,,
+20-1,1,,Leaf Blade,叶刃,grass,172,,,,,,,,,,,,,,,,,,
+20-1,2,,Triple Arrows,三连箭,fighting,101,,,,,,,,,,,,,,,,,,
+20-1,3,,Brave Bird,勇鸟猛攻,flying,162,,,,,,,,,,,,,,,,,,
+20-1,4,,Roost,羽栖,flying,,,,,,,,,,,,,,,,,,,
+20-1,1,agile,,,,132,,,,,,,,,,,,,,,,,,
+20-1,1,strong,,,,319,,,,,,,,,,,,,,,,,,
+20-1,2,agile,,,,81,,,,,,,,,,,,,,,,,,
+20-1,2,strong,,,,121,,,,,,,,,,,,,,,,,,
+20-1,3,agile,,,,130,,,,,,,,,,,,,,,,,,
+20-1,3,strong,,,,194,,,,,,,,,,,,,,,,,,
+20-2,1,,Wild Charge,疯狂伏特,electric,172,,,,,,,,,,,,,,,,,,
+20-2,2,,Thunder Wave,电磁波,electric,,,,,,,,,,,,,,,,,,,
+20-2,3,,Crunch,咬碎,dark,129,,,,,,,,,,,,,,,,,,
+20-2,4,,Iron Tail,铁尾,steel,162,,,,,,,,,,,,,,,,,,
+20-2,1,agile,,,,131,,,,,,,,,,,,,,,,,,
+20-2,1,strong,,,,212,,,,,,,,,,,,,,,,,,
+20-2,3,agile,,,,97,,,,,,,,,,,,,,,,,,
+20-2,3,strong,,,,162,,,,,,,,,,,,,,,,,,
+20-2,4,agile,,,,129,,,,,,,,,,,,,,,,,,
+20-2,4,strong,,,,194,,,,,,,,,,,,,,,,,,
+20-3,1,,Psychic,精神强念,psychic,166,,,,,,,,,,,,,,,,,,
+20-3,2,,Calm Mind,冥想,psychic,,,,,,,,,,,,,,,,,,,
+20-3,3,,Dazzling Gleam,魔法闪耀,fairy,124,,,,,,,,,,,,,,,,,,
+20-3,4,,Hyper Beam,破坏光线,normal,199,,,,,,,,,,,,,,,,,,
+20-3,1,agile,,,,124,,,,,,,,,,,,,,,,,,
+20-3,1,strong,,,,207,,,,,,,,,,,,,,,,,,
+20-3,3,agile,,,,100,,,,,,,,,,,,,,,,,,
+20-3,3,strong,,,,149,,,,,,,,,,,,,,,,,,
+20-3,4,agile,,,,166,,,,,,,,,,,,,,,,,,
+20-3,4,strong,,,,249,,,,,,,,,,,,,,,,,,
+20-4,1,,Shadow Ball,暗影球,ghost,164,,,,,,,,,,,,,,,,,,
+20-4,2,,Sludge Bomb,污泥炸弹,poison,164,,,,,,,,,,,,,,,,,,
+20-4,3,,Poison Gas,毒瓦斯,poison,,,,,,,,,,,,,,,,,,,
+20-4,4,,Icy Wind,冰冻之风,ice,98,,,,,,,,,,,,,,,,,,
+20-4,1,agile,,,,123,,,,,,,,,,,,,,,,,,
+20-4,1,strong,,,,205,,,,,,,,,,,,,,,,,,
+20-4,2,agile,,,,123,,,,,,,,,,,,,,,,,,
+20-4,2,strong,,,,205,,,,,,,,,,,,,,,,,,
+20-4,4,agile,,,,74,,,,,,,,,,,,,,,,,,
+20-4,4,strong,,,,123,,,,,,,,,,,,,,,,,,
+20-5,1,,Headlong Rush,突飞猛扑,ground,207,,,,,,,,,,,,,,,,,,
+20-5,2,,Slash,劈开,normal,145,,,,,,,,,,,,,,,,,,
+20-5,3,,Stone Edge,尖石攻击,rock,166,,,,,,,,,,,,,,,,,,
+20-5,4,,Bulk Up,健美,fighting,,,,,,,,,,,,,,,,,,,
+20-5,1,agile,,,,166,,,,,,,,,,,,,,,,,,
+20-5,1,strong,,,,249,,,,,,,,,,,,,,,,,,
+20-5,2,agile,,,,114,,,,,,,,,,,,,,,,,,
+20-5,2,strong,,,,264,,,,,,,,,,,,,,,,,,
+20-5,3,agile,,,,133,,,,,,,,,,,,,,,,,,
+20-5,3,strong,,,,373,,,,,,,,,,,,,,,,,,
+20-6,1,,Hydro Pump,水炮,water,213,,,,,,,,,,,,,,,,,,
+20-6,2,,Spacial Rend,亚空裂斩,dragon,191,,,,,,,,,,,,,,,,,,
+20-6,3,,Earth Power,大地之力,ground,136,,,,,,,,,,,,,,,,,,
+20-6,4,,Flamethrower,喷射火焰,fire,136,,,,,,,,,,,,,,,,,,
+20-6,1,agile,,,,170,,,,,,,,,,,,,,,,,,
+20-6,1,strong,,,,255,,,,,,,,,,,,,,,,,,
+20-6,2,agile,,,,159,,,,,,,,,,,,,,,,,,
+20-6,2,strong,,,,234,,,,,,,,,,,,,,,,,,
+20-6,3,agile,,,,102,,,,,,,,,,,,,,,,,,
+20-6,3,strong,,,,170,,,,,,,,,,,,,,,,,,
+20-6,4,agile,,,,102,,,,,,,,,,,,,,,,,,
+20-6,4,strong,,,,170,,,,,,,,,,,,,,,,,,
+20-6b,2,,,,,255,,,,,,,,,,,,,,,,,,
+20-6b,2,agile,,,,207,,,,,,,,,,,,,,,,,,
+20-6b,2,strong,,,,319,,,,,,,,,,,,,,,,,,
