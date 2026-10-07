@@ -4,9 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Pokémon Squads</title>
-<link rel="icon" href="icons/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -480,7 +477,8 @@ function drawCard(g,mon,animate){
   const st=STATE[mon.id]||(STATE[mon.id]={form:-1,variant:""});
   const v=view(mon, st.form, st.variant);
   const name=L(mon.base,"name");
-  const formLabel = st.form>=0 ? L(mon.forms[st.form],"form") : "";
+  const baseLab = L(mon.base,"form");                                    // optional name of the default form (e.g. Incarnate Forme)
+  const formLabel = st.form>=0 ? L(mon.forms[st.form],"form") : baseLab;
   const color=v.color||"#ddd";
   el.style.setProperty("--pc",color);
   el.style.setProperty("--deep",deepen(color));
@@ -488,7 +486,12 @@ function drawCard(g,mon,animate){
   const kinds=[]; mon.forms.forEach((f,idx)=>{ const k=f.form||"alt"; let g2=kinds.find(x=>x.k===k); if(!g2) kinds.push(g2={k,idx:[]}); g2.idx.push(idx); });
   const forms=kinds.map(g2=>{
     const pos=g2.idx.indexOf(st.form), on=pos>=0, n=g2.idx.length;
-    const f=mon.forms[on?st.form:g2.idx[0]], lab=on?L(f,"form"):(n>1?L(f,"form")+" …":L(f,"form"));
+    const f=mon.forms[on?st.form:g2.idx[0]];
+    let lab=on?L(f,"form"):(n>1?L(f,"form")+" …":L(f,"form"));
+    if(baseLab){                                                     // tooltip says what a click switches to
+      const nxt=on ? (pos+1<n ? mon.forms[g2.idx[pos+1]] : null) : f;
+      lab=`${formLabel} → ${nxt?L(nxt,"form"):baseLab}`;
+    }
     return `<button class="fbtn${on?" on":""}" data-kind="${g2.k}" title="${esc(lab)}" aria-label="${esc(lab)}" aria-pressed="${on}">${img([`icons/form-${g2.k}.png`], esc(FORM_FALLBACK[g2.k]||FORM_FALLBACK.alt))}${n>1&&on?`<span class="fcnt">${pos+1}/${n}</span>`:""}</button>`;
   }).join("");
   const variants=mon.variants.map(k=>`<button class="vbtn${st.variant===k?" on":""}" data-variant="${k}" aria-pressed="${st.variant===k}">${img([`icons/style-${k}.png`],"")}${esc(UI[LANG].variants[k]||k)}</button>`).join("");
